@@ -4,9 +4,7 @@ import com.org.spemajorbackend.entity.Mess;
 import com.org.spemajorbackend.service.CustomerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +23,13 @@ public class CustomerController {
     public ResponseEntity<?> getMessList(){
         List<Mess> messList = customerService.getMessList();
         return ResponseEntity.ok(messList);
+    }
+
+    @PostMapping("/join/{customer_id}/{owner_id}")
+    public ResponseEntity<?> sendJoinRequest(@PathVariable String customer_id, @PathVariable String owner_id){
+        boolean accepted = customerService.sendJoinRequest(customer_id, owner_id);
+        if(accepted)
+            return ResponseEntity.ok("Request sent successfully!");
+        return ResponseEntity.badRequest().body("Request already sent");
     }
 }
