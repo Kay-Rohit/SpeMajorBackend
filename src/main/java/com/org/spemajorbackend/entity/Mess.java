@@ -50,6 +50,9 @@ public class Mess {
     @JsonManagedReference
     private List<Menu> menus = new ArrayList<>();
 
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<Review> reviews = new ArrayList<>();
 
     public Mess(String username,
                 String firstname,
