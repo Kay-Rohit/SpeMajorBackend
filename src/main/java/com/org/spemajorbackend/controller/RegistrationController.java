@@ -22,7 +22,7 @@ public class RegistrationController {
         String response = registrationService.registerCustomer(request);
 
         if(response=="Username already taken!"){
-            return ResponseEntity.badRequest().body(response);
+            return ResponseEntity.accepted().body(response);
         }
         else if(response=="Registered Successfully")
             return ResponseEntity.ok(response);
@@ -34,7 +34,7 @@ public class RegistrationController {
     public ResponseEntity<?> registerMess(@RequestBody MessRegRequest request){
         String response = registrationService.registerMess(request);
         if(response=="Username already taken!"){
-            return ResponseEntity.badRequest().body(response);
+            return ResponseEntity.accepted().body(response);
         }
         else if(response=="Registered Successfully")
             return ResponseEntity.ok(response);
