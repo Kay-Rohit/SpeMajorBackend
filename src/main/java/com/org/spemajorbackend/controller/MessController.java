@@ -34,4 +34,12 @@ public class MessController {
         ResponseEntity<?> status = messService.acceptRequest(owner_id, customer_id);
         return ResponseEntity.ok(status);
     }
+
+    @GetMapping("/owner-details/{owner_id}")
+    public ResponseEntity<?> sendOwnerDetails(@NotNull @PathVariable String owner_id)
+    {
+        ResponseEntity<?> getDetails = messService.getOwnerDetails(owner_id);
+        return ResponseEntity.ok(getDetails);
+    }
+
 }
