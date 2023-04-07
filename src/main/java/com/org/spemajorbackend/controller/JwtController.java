@@ -23,7 +23,7 @@ public class JwtController {
 
     @PostMapping("/authenticate")
     public JwtResponse createJwtToken(@NotNull @RequestBody JwtRequest jwtRequest) throws Exception {
-        System.out.println("Inside JWT controller");
+//        System.out.println("Inside JWT controller");
         AuthMaster existingUser = authMasterRepository.findById(jwtRequest.getUsername()).get();
         System.out.println("Existing user in /authenticate request"+existingUser);
 

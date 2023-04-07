@@ -1,20 +1,15 @@
 package com.org.spemajorbackend.service;
 
 import com.org.spemajorbackend.dro.AddMenuRequest;
-import com.org.spemajorbackend.entity.Customer;
-import com.org.spemajorbackend.entity.JoiningRequest;
-import com.org.spemajorbackend.entity.Menu;
-import com.org.spemajorbackend.entity.Mess;
-import com.org.spemajorbackend.repository.CustomerRepository;
-import com.org.spemajorbackend.repository.JoiningRequestRepository;
-import com.org.spemajorbackend.repository.MenuRepository;
-import com.org.spemajorbackend.repository.MessRepository;
+import com.org.spemajorbackend.entity.*;
+import com.org.spemajorbackend.repository.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MessService {
@@ -24,11 +19,14 @@ public class MessService {
     private final CustomerRepository customerRepository;
     private final JoiningRequestRepository requestRepository;
 
-    public MessService(MessRepository messRepository, MenuRepository menuRepository, CustomerRepository customerRepository, JoiningRequestRepository requestRepository) {
+    private final ReviewRepository reviewRepository;
+
+    public MessService(MessRepository messRepository, MenuRepository menuRepository, CustomerRepository customerRepository, JoiningRequestRepository requestRepository, ReviewRepository reviewRepository) {
         this.messRepository = messRepository;
         this.menuRepository = menuRepository;
         this.customerRepository = customerRepository;
         this.requestRepository = requestRepository;
+        this.reviewRepository = reviewRepository;
     }
 
     public boolean addMenuItems(List<AddMenuRequest> menuItems, String mess_owner_username) {
@@ -80,5 +78,28 @@ public class MessService {
             System.out.println(e.getMessage());
             return ResponseEntity.badRequest().body(e.getMessage());
         }
+    }
+
+    public ResponseEntity<?> getOwnerDetails(String owner_id)
+    {
+//        Optional<Mess> owner = messRepository.findById(owner_id);
+        Mess owner = messRepository.findById(owner_id).orElseThrow(
+                () -> new UsernameNotFoundException("Sorry no mess found owned by:"+owner_id)
+        );
+        try{
+
+            List<Menu> menus = menuRepository.findByMess_Username(owner_id);
+            List<Customer> customers = customerRepository.findByMess_Username(owner_id);
+            List<Review> reviews = reviewRepository.findByMess_Username(owner_id);
+
+            owner.setMenus(menus);
+            owner.setCustomers(customers);
+            owner.setReviews(reviews);
+        }
+        catch(Exception e){
+            throw new RuntimeException("Employee is not found for the id"+owner_id);
+        }
+        return ResponseEntity.ok(owner);
+
     }
 }
