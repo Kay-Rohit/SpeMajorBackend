@@ -1,15 +1,18 @@
 package com.org.spemajorbackend.service;
 
 import com.org.spemajorbackend.dro.AddReviewRequest;
+import com.org.spemajorbackend.dto.CustomerProfileResponse;
 import com.org.spemajorbackend.dto.ReviewResponse;
 import com.org.spemajorbackend.entity.*;
 import com.org.spemajorbackend.repository.*;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CustomerService {
@@ -93,5 +96,55 @@ public class CustomerService {
             System.out.println(e.getMessage());
         }
         return false;
+    }
+
+    public CustomerProfileResponse getProfile(String customerId) {
+        Customer customer = customerRepository.findById(customerId).orElseThrow(
+                () -> new UsernameNotFoundException("No customer found with username:"+customerId)
+        );
+        System.out.println("customer fetched with username "+customer.getUsername());
+
+        //check if there is mess assigned to a customer or not
+//        System.out.println(customer.getMess());
+        if(customer.getMess() != null){
+            Mess assignedMess = messRepository.findById(customer.getMess().getUsername()).get();
+            System.out.println("mess fetched"+ assignedMess.getMessname());
+
+            List<Menu> menus = menuRepository.findByMess_Username(customer.getMess().getUsername());
+
+            CustomerProfileResponse response =
+                    new CustomerProfileResponse(
+                            customer.getUsername(),
+                            customer.getFirstname(),
+                            customer.getLastname(),
+                            customer.getEmail(),
+                            customer.getPhone(),
+                            assignedMess.getMessname(),
+                            assignedMess.getFirstname(),
+                            assignedMess.getLastname(),
+                            assignedMess.getPhone(),
+                            assignedMess.getAddress(),
+                            menus
+                    );
+            return response;
+        }
+        else{
+            System.out.println("Inside else");
+            CustomerProfileResponse response =
+                    new CustomerProfileResponse(
+                            customer.getUsername(),
+                            customer.getFirstname(),
+                            customer.getLastname(),
+                            customer.getEmail(),
+                            customer.getPhone(),
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                    );
+            return response;
+        }
     }
 }

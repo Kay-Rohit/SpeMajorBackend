@@ -1,7 +1,9 @@
 package com.org.spemajorbackend.controller;
 
 import com.org.spemajorbackend.dro.AddReviewRequest;
+import com.org.spemajorbackend.dto.CustomerProfileResponse;
 import com.org.spemajorbackend.dto.ReviewResponse;
+import com.org.spemajorbackend.entity.Customer;
 import com.org.spemajorbackend.entity.Mess;
 import com.org.spemajorbackend.service.CustomerService;
 import com.sun.istack.NotNull;
@@ -47,5 +49,17 @@ public class CustomerController {
             System.out.println(e.getMessage());
         }
         return ResponseEntity.badRequest().body("Already added review!");
+    }
+
+    @GetMapping("/get-profile/{customer_id}")
+    public ResponseEntity<?> getProfile(@NotNull @PathVariable String customer_id){
+        try{
+            CustomerProfileResponse customerProfile = customerService.getProfile(customer_id);
+            return ResponseEntity.ok(customerProfile);
+        }
+        catch (Exception e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+//        return ResponseEntity.ok().build();
     }
 }
