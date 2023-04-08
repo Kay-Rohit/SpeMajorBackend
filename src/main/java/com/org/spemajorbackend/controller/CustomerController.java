@@ -33,7 +33,7 @@ public class CustomerController {
         boolean accepted = customerService.sendJoinRequest(customer_id, owner_id);
         if(accepted)
             return ResponseEntity.ok("Request sent successfully!");
-        return ResponseEntity.badRequest().body("Request already sent");
+        return ResponseEntity.accepted().body("Request already sent");
     }
 
     @PostMapping("/add-review")
