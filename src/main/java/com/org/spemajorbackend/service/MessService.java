@@ -1,6 +1,7 @@
 package com.org.spemajorbackend.service;
 
 import com.org.spemajorbackend.dro.AddMenuRequest;
+import com.org.spemajorbackend.dro.UpdateMessDetails;
 import com.org.spemajorbackend.entity.*;
 import com.org.spemajorbackend.repository.*;
 import org.springframework.http.ResponseEntity;
@@ -101,5 +102,30 @@ public class MessService {
         }
         return ResponseEntity.ok(owner);
 
+    }
+
+
+    public ResponseEntity<?> updateOwnerDetails(String owner_id, UpdateMessDetails mess) {
+        Mess owner = messRepository.findById(owner_id).orElseThrow(
+                () -> new UsernameNotFoundException("Sorry no mess found owned by:"+owner_id)
+        );
+        try{
+            owner.setPhone(mess.getPhone());
+            owner.setMessname(mess.getMessname());
+            owner.setAddress(mess.getAddress());
+            owner.setLatitude(mess.getLatitude());
+            owner.setLongitude(mess.getLongitude());
+            owner.setService(mess.getService());
+            owner.setType(mess.getType());
+            owner.setTrial(mess.isTrial());
+            owner.setBreakfast(mess.isBreakfast());
+            owner.setPricing(mess.getPricing());
+            messRepository.save(owner);
+
+        }
+        catch(Exception e){
+            throw new RuntimeException("Employee is not found for the id"+owner_id);
+        }
+        return ResponseEntity.ok(owner);
     }
 }

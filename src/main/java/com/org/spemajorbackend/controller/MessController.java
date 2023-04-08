@@ -1,6 +1,7 @@
 package com.org.spemajorbackend.controller;
 
 import com.org.spemajorbackend.dro.AddMenuRequest;
+import com.org.spemajorbackend.dro.UpdateMessDetails;
 import com.org.spemajorbackend.service.MessService;
 import com.sun.istack.NotNull;
 import org.springframework.http.ResponseEntity;
@@ -40,6 +41,13 @@ public class MessController {
     {
         ResponseEntity<?> getDetails = messService.getOwnerDetails(owner_id);
         return ResponseEntity.ok(getDetails);
+    }
+
+    @PostMapping("updateOwner-details/{owner_id}")
+    public ResponseEntity<?> updateOwnerDetails(@NotNull @PathVariable String owner_id, @NotNull @RequestBody UpdateMessDetails mess)
+    {
+        ResponseEntity<?> updateDetails = messService.updateOwnerDetails(owner_id,mess);
+        return ResponseEntity.ok(updateDetails);
     }
 
 }
