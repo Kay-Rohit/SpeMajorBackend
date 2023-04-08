@@ -79,7 +79,8 @@ public class CustomerService {
                                 review.getComment(),
                                 LocalDateTime.now(),
                                 mess,
-                                customer
+                                customer,
+                                customer.getUsername()
                                 )
                 );
             else
@@ -119,6 +120,7 @@ public class CustomerService {
                             customer.getLastname(),
                             customer.getEmail(),
                             customer.getPhone(),
+                            assignedMess.getUsername(),
                             assignedMess.getMessname(),
                             assignedMess.getFirstname(),
                             assignedMess.getLastname(),
@@ -137,6 +139,7 @@ public class CustomerService {
                             customer.getLastname(),
                             customer.getEmail(),
                             customer.getPhone(),
+                            null,
                             null,
                             null,
                             null,

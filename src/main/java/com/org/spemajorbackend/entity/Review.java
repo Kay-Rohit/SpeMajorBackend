@@ -40,11 +40,14 @@ public class Review {
     private String comment;
     private LocalDateTime createdAt;
 
-    public Review(Integer rating, String comment, LocalDateTime createdAt, Mess mess, Customer customer) {
+    private String reviewBy;
+
+    public Review(Integer rating, String comment, LocalDateTime createdAt, Mess mess, Customer customer, String reviewBy) {
         this.rating = rating;
         this.comment = comment;
         this.createdAt = createdAt;
         this.mess = mess;
         this.customer = customer;
+        this.reviewBy = reviewBy;
     }
 }

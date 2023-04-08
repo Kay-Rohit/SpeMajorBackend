@@ -13,6 +13,8 @@ public class CustomerProfileResponse {
     private String lastname;
     private String email;
     private String phone;
+    //mess
+    private String ownerUsername;
     private String messname;
 
     private String ownerFirstname;
@@ -26,6 +28,7 @@ public class CustomerProfileResponse {
                                    String lastname,
                                    String email,
                                    String phone,
+                                   String ownerUsername,
                                    String messname,
                                    String ownerFirstname,
                                    String ownerLastname,
@@ -37,6 +40,7 @@ public class CustomerProfileResponse {
         this.lastname = lastname;
         this.email = email;
         this.phone = phone;
+        this.ownerUsername = ownerUsername;
         this.messname = messname;
         this.ownerFirstname = ownerFirstname;
         this.ownerLastname = ownerLastname;
