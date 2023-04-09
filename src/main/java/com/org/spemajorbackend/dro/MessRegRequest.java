@@ -22,6 +22,7 @@ public class MessRegRequest {
     private boolean trial;
     //if they provide breakfast as well
     private boolean breakfast;
+    private String aboutSundays;
     //pricing per month
     private String pricing;
 }

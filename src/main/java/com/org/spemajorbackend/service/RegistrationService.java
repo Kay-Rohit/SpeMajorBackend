@@ -100,6 +100,7 @@ public class RegistrationService {
                                 request.getType(),
                                 request.isTrial(),
                                 request.isBreakfast(),
+                                request.getAboutSundays(),
                                 request.getPricing()
                         )
                 );

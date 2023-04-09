@@ -36,14 +36,30 @@ public class MessService {
         );
         try{
             for (AddMenuRequest menuItem : menuItems) {
-                Menu menu = new Menu(
-                        menuItem.getDay(),
-                        menuItem.getBreakfast(),
-                        menuItem.getLunch(),
-                        menuItem.getDinner()
-                );
-                menu.setMess(mess);
-                menuRepository.save(menu);
+
+                Menu existingDayMenu = menuRepository.findByMess_UsernameAndAndDay(mess_owner_username, menuItem.getDay());
+//                save menu only if there is no menu item on that day available
+                if(existingDayMenu == null){
+                    Menu menu = new Menu(
+                            menuItem.getDay(),
+                            menuItem.getBreakfast(),
+                            menuItem.getLunch(),
+                            menuItem.getDinner()
+                    );
+                    menu.setMess(mess);
+                    menuRepository.save(menu);
+                }
+                //else update
+                else{
+//                    updating menu is day already exist as we are storing only the weekly menu
+                    menuRepository.updateMenuByDay(
+                            menuItem.getBreakfast(),
+                            menuItem.getLunch(),
+                            menuItem.getDinner(),
+                            menuItem.getDay(),
+                            mess_owner_username
+                    );
+                }
             }
         }
         catch (Exception e){

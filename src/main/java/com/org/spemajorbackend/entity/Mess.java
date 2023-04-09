@@ -31,6 +31,7 @@ public class Mess {
     private boolean trial;
     //if they provide breakfast as well
     private boolean breakfast;
+    private String aboutSundays;
     //pricing per month
     private String pricing;
 
@@ -69,6 +70,7 @@ public class Mess {
                 String type,
                 boolean trial,
                 boolean breakfast,
+                String aboutSundays,
                 String pricing) {
         this.username = username;
         this.firstname = firstname;
@@ -82,6 +84,7 @@ public class Mess {
         this.type = type;
         this.trial = trial;
         this.breakfast = breakfast;
+        this.aboutSundays = aboutSundays;
         this.pricing = pricing;
     }
 }
