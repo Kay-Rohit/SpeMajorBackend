@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface JoiningRequestRepository extends JpaRepository<JoiningRequest, Long> {
     List<JoiningRequest> findByCustomer_Username(String customer_username);
+    List<JoiningRequest> findByMess_Username(String mess_owner_username);
 }

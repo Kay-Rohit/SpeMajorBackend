@@ -2,6 +2,7 @@ package com.org.spemajorbackend.controller;
 
 import com.org.spemajorbackend.dro.AddMenuRequest;
 import com.org.spemajorbackend.dro.UpdateMessDetails;
+import com.org.spemajorbackend.dto.JoinRequestResponse;
 import com.org.spemajorbackend.service.MessService;
 import com.sun.istack.NotNull;
 import org.springframework.http.ResponseEntity;
@@ -48,6 +49,12 @@ public class MessController {
     {
         ResponseEntity<?> updateDetails = messService.updateOwnerDetails(owner_id,mess);
         return ResponseEntity.ok(updateDetails);
+    }
+
+    @GetMapping("/requests/{owner_id}")
+    public ResponseEntity<?> seeJoiningRequests(@NotNull @PathVariable String owner_id){
+        List<JoinRequestResponse> listOfRequests = messService.seeJoiningRequests(owner_id);
+        return ResponseEntity.ok(listOfRequests);
     }
 
 }

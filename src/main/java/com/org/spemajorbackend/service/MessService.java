@@ -2,6 +2,7 @@ package com.org.spemajorbackend.service;
 
 import com.org.spemajorbackend.dro.AddMenuRequest;
 import com.org.spemajorbackend.dro.UpdateMessDetails;
+import com.org.spemajorbackend.dto.JoinRequestResponse;
 import com.org.spemajorbackend.entity.*;
 import com.org.spemajorbackend.repository.*;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -143,5 +145,18 @@ public class MessService {
             throw new RuntimeException("Employee is not found for the id"+owner_id);
         }
         return ResponseEntity.ok(owner);
+    }
+
+    public List<JoinRequestResponse> seeJoiningRequests(String ownerId) {
+        List<JoiningRequest> requests = requestRepository.findByMess_Username(ownerId);
+        List<JoinRequestResponse> responses = new ArrayList<>();
+        for (JoiningRequest request : requests) {
+            responses.add(new JoinRequestResponse(
+                    request.getMess().getUsername(),
+                    request.getCustomer().getUsername()
+            ));
+        }
+
+        return responses;
     }
 }
