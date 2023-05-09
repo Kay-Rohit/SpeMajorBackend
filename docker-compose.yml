@@ -26,7 +26,7 @@ services:
       - mysql
       
   frontend:
-    image: kayrohit/whatamess-frontend
+    image: vishalrao7/whatamess_frontend
     network_mode: host
     environment:
       HOST_IP: ${DOCKER_HOST_IP}
