@@ -26,7 +26,7 @@ public class JwtController {
     public ResponseEntity<?> createJwtToken(@NotNull @RequestBody JwtRequest jwtRequest) throws Exception {
 //        System.out.println("Inside JWT controller");
         AuthMaster existingUser = authMasterRepository.findById(jwtRequest.getUsername()).get();
-        System.out.println("Existing user in /authenticate request"+existingUser);
+        System.out.println("Existing user in /authenticate request " + existingUser);
 
         if(authMasterRepository.existsById(jwtRequest.getUsername())) {
             try {

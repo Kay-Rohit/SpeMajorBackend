@@ -7,18 +7,25 @@ import com.org.spemajorbackend.entity.Customer;
 import com.org.spemajorbackend.entity.Mess;
 import com.org.spemajorbackend.service.CustomerService;
 import com.sun.istack.NotNull;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//for logging
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
 @RestController
 @RequestMapping("/customer")
 @PreAuthorize("hasRole('ROLE_CUSTOMER')")
+@Slf4j
 public class CustomerController {
 
     private final CustomerService customerService;
+    private static final Logger logger = LogManager.getLogger(CustomerController.class);
 
     public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
@@ -26,12 +33,14 @@ public class CustomerController {
 
     @GetMapping("/get-all-mess")
     public ResponseEntity<?> getMessList(){
+        logger.info("[Get all mess list]");
         List<Mess> messList = customerService.getMessList();
         return ResponseEntity.ok(messList);
     }
 
     @PostMapping("/join/{customer_id}/{owner_id}")
     public ResponseEntity<?> sendJoinRequest(@NotNull @PathVariable String customer_id, @NotNull @PathVariable String owner_id){
+        logger.info("[Request to join a mess with id] - " + owner_id);
         boolean accepted = customerService.sendJoinRequest(customer_id, owner_id);
         if(accepted)
             return ResponseEntity.ok("Request sent successfully!");
@@ -40,6 +49,7 @@ public class CustomerController {
 
     @PostMapping("/add-review")
     public ResponseEntity<?> addReview(@NotNull @RequestBody AddReviewRequest review){
+        logger.info("[Add review for the mess] - " + review.getMess_owner_username() + "[by the customer] -" + review.getCustomer_username());
         try{
             boolean added = customerService.addReview(review);
             if(added)
@@ -53,6 +63,7 @@ public class CustomerController {
 
     @GetMapping("/get-profile/{customer_id}")
     public ResponseEntity<?> getProfile(@NotNull @PathVariable String customer_id){
+        logger.info("[Get profile info of customer] - " + customer_id);
         try{
             CustomerProfileResponse customerProfile = customerService.getProfile(customer_id);
             return ResponseEntity.ok(customerProfile);

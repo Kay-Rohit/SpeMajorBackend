@@ -159,4 +159,17 @@ public class MessService {
 
         return responses;
     }
+
+    public ResponseEntity<?> rejectRequest(String ownerId, String customerId) {
+        Customer customer = customerRepository.findById(customerId).get();
+        Mess mess = messRepository.findById(ownerId).get();
+        try{
+            requestRepository.deleteByCustomer_UsernameAndMess_Username(customer,mess);
+            return ResponseEntity.ok("Request deleted");
+        }
+        catch (Exception e){
+            System.out.printf(e.getMessage());
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 }
