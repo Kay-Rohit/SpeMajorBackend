@@ -10,7 +10,18 @@
       copy:
         src: docker-compose.yml
         dest: ./
-
+        
+    # Copy encrypted file and ansible-vault password file to decrypt at the target machine
+    - name: Copy excrypted credentials file
+      copy:
+        src: encrypt.txt
+        dest: ./
+        
+    # Copy ansible-vault password file
+    - name: Copy ansible-vault password file
+      copy:
+        src: password.txt
+        dest: ./
 
     # Set environment variable on target machine to be fetched and used by docker containers to expose frontend to host ip
     # The below command will create an env variable name DOCKER_HOST_IP containing the IP address 
