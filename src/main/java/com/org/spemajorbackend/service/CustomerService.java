@@ -1,18 +1,18 @@
 package com.org.spemajorbackend.service;
 
 import com.org.spemajorbackend.dro.AddReviewRequest;
+import com.org.spemajorbackend.dro.ForgetPasswordRequest;
 import com.org.spemajorbackend.dto.CustomerProfileResponse;
-import com.org.spemajorbackend.dto.ReviewResponse;
 import com.org.spemajorbackend.entity.*;
 import com.org.spemajorbackend.repository.*;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CustomerService {
@@ -22,13 +22,16 @@ public class CustomerService {
     private final CustomerRepository customerRepository;
     private final JoiningRequestRepository requestRepository;
     private final ReviewRepository reviewRepository;
+    
+    private final AuthMasterRepository authMasterRepository;
 
-    public CustomerService(MessRepository messRepository, MenuRepository menuRepository, CustomerRepository customerRepository, JoiningRequestRepository requestRepository, ReviewRepository reviewRepository) {
+    public CustomerService(MessRepository messRepository, MenuRepository menuRepository, CustomerRepository customerRepository, JoiningRequestRepository requestRepository, ReviewRepository reviewRepository, AuthMasterRepository authMasterRepository) {
         this.messRepository = messRepository;
         this.menuRepository = menuRepository;
         this.customerRepository = customerRepository;
         this.requestRepository = requestRepository;
         this.reviewRepository = reviewRepository;
+        this.authMasterRepository = authMasterRepository;
     }
 
     public List<Mess> getMessList() {
@@ -149,5 +152,27 @@ public class CustomerService {
                     );
             return response;
         }
+    }
+
+    public boolean resetPassword(ForgetPasswordRequest forgetPasswordRequest) {
+        String username = forgetPasswordRequest.getUsername();
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        AuthMaster authuser = authMasterRepository.findById(username).orElseThrow(
+                () -> new UsernameNotFoundException("No customer found with username:"+username)
+        );
+//        checking if existing password matched with send old password
+        if(authuser.getPassword()==passwordEncoder.encode(forgetPasswordRequest.getOldPassword())){
+            authMasterRepository.save(
+                    new AuthMaster(
+                            authuser.getUsername(),
+                            passwordEncoder.encode(forgetPasswordRequest.getNewPassword()),
+                            authuser.getRole()
+                    )
+            );
+        }
+        else{
+            return false;
+        }
+        return true;
     }
 }

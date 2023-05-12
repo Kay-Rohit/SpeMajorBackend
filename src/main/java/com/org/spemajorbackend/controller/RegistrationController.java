@@ -2,14 +2,13 @@ package com.org.spemajorbackend.controller;
 
 import com.org.spemajorbackend.dro.CustomerRegRequest;
 import com.org.spemajorbackend.dro.MessRegRequest;
+import com.org.spemajorbackend.service.EmailService;
 import com.org.spemajorbackend.service.RegistrationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 //for logging
 import org.apache.logging.log4j.Logger;
@@ -21,6 +20,8 @@ public class RegistrationController {
 
     @Autowired
     private RegistrationService registrationService;
+    @Autowired
+    private EmailService emailService;
     private static final Logger logger = LogManager.getLogger(RegistrationController.class);
 
     @PostMapping("/register-new-customer")
@@ -49,5 +50,10 @@ public class RegistrationController {
             return ResponseEntity.ok(response);
         else
             return ResponseEntity.badRequest().build();
+    }
+
+    @GetMapping("/forgot-password/{email}")
+    public ResponseEntity<?> forgotPassword(@PathVariable String email) {
+        return emailService.forgotPassword(email);
     }
 }

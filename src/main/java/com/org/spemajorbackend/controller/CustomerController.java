@@ -1,6 +1,7 @@
 package com.org.spemajorbackend.controller;
 
 import com.org.spemajorbackend.dro.AddReviewRequest;
+import com.org.spemajorbackend.dro.ForgetPasswordRequest;
 import com.org.spemajorbackend.dto.CustomerProfileResponse;
 import com.org.spemajorbackend.dto.ReviewResponse;
 import com.org.spemajorbackend.entity.Customer;
@@ -72,5 +73,14 @@ public class CustomerController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
 //        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/reset-password")
+    public ResponseEntity<?> resetPassword(@RequestBody ForgetPasswordRequest forgetPasswordRequest){
+        boolean status = customerService.resetPassword(forgetPasswordRequest);
+        if(status)
+            return ResponseEntity.ok("Password Reset was successfull");
+        else
+            return ResponseEntity.badRequest().body("Unable to change the password");
     }
 }
