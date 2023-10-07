@@ -1,10 +1,13 @@
 # SpeMajorBackend
-Repo for spe major project backend
+Repo for spe major project backend and frontend
 
 Documentaion of the project
-https://docs.google.com/document/d/1fb16XEJ-2oDqY1UdpzP7I1xnMp1JLpdtxcJ1XgDxZMw/edit?usp=sharing
+[https://docs.google.com/document/d/1fb16XEJ-2oDqY1UdpzP7I1xnMp1JLpdtxcJ1XgDxZMw/edit?usp=sharing](https://drive.google.com/file/d/1_kQemleBxc7Bqyrl03Y4SxX2veg0mtIL/view?usp=sharing)
 
-# Steps of how we achieved encryption
+
+Apart from the project, this is what extra is done by us-
+
+# Steps of how we achieved encryption in Ansible
 
 1. This create a plain text file which we will encrypt lated using ansible-vault  
 echo "PASSWORD=prototype1">encrypt.txt
