@@ -5,6 +5,8 @@ HELP.md
 #!**/src/test/**/target/
 
 ### STS ###
+.mvn
+.sapient
 .apt_generated
 .classpath
 .factorypath
