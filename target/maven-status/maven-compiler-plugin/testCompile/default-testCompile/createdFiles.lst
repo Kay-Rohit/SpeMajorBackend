@@ -1,0 +1,14 @@
+com/org/spemajorbackend/controller/MessControllerTest2.class
+com/org/spemajorbackend/controller/RegistrationControllerTest.class
+com/org/spemajorbackend/controller/CustomerControllerTest.class
+com/org/spemajorbackend/service/CustomerServiceTest2.class
+com/org/spemajorbackend/controller/MessControllerTest.class
+com/org/spemajorbackend/controller/CustomerControllerTest2.class
+com/org/spemajorbackend/service/MessServiceTest2.class
+com/org/spemajorbackend/controller/JwtControllerTest.class
+com/org/spemajorbackend/service/RegistrationServiceTest.class
+com/org/spemajorbackend/service/CustomerServiceTest.class
+com/org/spemajorbackend/controller/CalculatorControllerTest.class
+com/org/spemajorbackend/config/JwtRequestFilterTest.class
+com/org/spemajorbackend/service/MessServiceTest.class
+com/org/spemajorbackend/service/CalculatorServiceTest.class
