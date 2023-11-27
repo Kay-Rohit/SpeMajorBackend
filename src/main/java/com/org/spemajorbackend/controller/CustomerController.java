@@ -1,11 +1,11 @@
 package com.org.spemajorbackend.controller;
 
 import com.org.spemajorbackend.dro.AddReviewRequest;
+import com.org.spemajorbackend.dro.AmountRequest;
 import com.org.spemajorbackend.dro.ForgetPasswordRequest;
 import com.org.spemajorbackend.dto.CustomerProfileResponse;
-import com.org.spemajorbackend.dto.ReviewResponse;
-import com.org.spemajorbackend.entity.Customer;
 import com.org.spemajorbackend.entity.Mess;
+import com.org.spemajorbackend.service.CalculatorService;
 import com.org.spemajorbackend.service.CustomerService;
 import com.sun.istack.NotNull;
 import lombok.extern.slf4j.Slf4j;
@@ -13,6 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 //for logging
@@ -26,10 +28,12 @@ import org.apache.logging.log4j.LogManager;
 public class CustomerController {
 
     private final CustomerService customerService;
+    private final CalculatorService calculatorService;
     private static final Logger logger = LogManager.getLogger(CustomerController.class);
 
-    public CustomerController(CustomerService customerService) {
+    public CustomerController(CustomerService customerService, CalculatorService calculatorService) {
         this.customerService = customerService;
+        this.calculatorService = calculatorService;
     }
 
     @GetMapping("/get-all-mess")
@@ -57,7 +61,8 @@ public class CustomerController {
                 return ResponseEntity.ok("Review Added Successfully");
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+//            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
         }
         return ResponseEntity.badRequest().body("Already added review!");
     }
@@ -82,5 +87,25 @@ public class CustomerController {
             return ResponseEntity.ok("Password Reset was successfull");
         else
             return ResponseEntity.badRequest().body("Unable to change the password");
+    }
+
+
+    @GetMapping("/calculate-amount")
+    public ResponseEntity<?> calculateAmounnt(@RequestBody AmountRequest amountRequest)
+    {
+        try {
+            Date startDate = amountRequest.getStartDate();
+            Date endDate = amountRequest.getEndDate();
+            String messId = amountRequest.getMessId();
+            String customerId = amountRequest.getId();
+
+            float res = calculatorService.calculateAmount(messId, startDate, endDate, customerId);
+            return ResponseEntity.ok().body(res);
+        }
+        catch (Exception e) {
+//            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 }

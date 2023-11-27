@@ -1,0 +1,4088 @@
+---
+modelFingerprint: "036834F26E733EF92D673405ED3C7E00"
+methods:
+- method:
+    name: "doFilterInternal"
+    returnType: "void"
+    signature: "doFilterInternal(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.FilterChain)\
+      \ : void"
+    throwsExceptions:
+    - "javax.servlet.ServletException"
+    - "java.io.IOException"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.IllegalArgumentException"
+    - idExternalInstruction: 0
+      id: 3
+      catchExceptions:
+      - "io.jsonwebtoken.ExpiredJwtException"
+    - idExternalInstruction: 0
+      id: 4
+      catchExceptions:
+      - "java.lang.Exception"
+    instructionFingerprint: "FAC66E19D756F2080268ADBED0C07C5B"
+    parametersTypes:
+    - "javax.servlet.http.HttpServletRequest"
+    - "javax.servlet.http.HttpServletResponse"
+    - "javax.servlet.FilterChain"
+  paths:
+  - pathId: "path3"
+    pathIdForUser: "path1"
+    testPathName: "doFilterInternalWhenUsernameIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "7951CD2B264CB9656424C65833D8E05D"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "f3754ae8-f0ab-3bb2-bbcb-6cfa2cbb35f5"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path4"
+    pathIdForUser: "path2"
+    testPathName: "doFilterInternalWhenRequestTokenHeaderIsNullAndUsernameIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "C8D0C4DDE7341938FBA5512A614DF3FA"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.config.JwtRequestFilter"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.config.JwtRequestFilter"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.config.JwtRequestFilter"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "request"
+      modelFingerprint: "AC676A6669247E308455623F151FB82A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.http.HttpServletRequest"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.http.HttpServletRequest"
+        uuid: "doFilterInternal_httpServletRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "response"
+      modelFingerprint: "06354CDD55D79979B243A5C27B291A75"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.http.HttpServletResponse"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.http.HttpServletResponse"
+        uuid: "doFilterInternal_httpServletResponse1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "filterChain"
+      modelFingerprint: "DDE5370466F0549E3CB8F0FBF96BA8C0"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.FilterChain"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.FilterChain"
+        uuid: "doFilterInternal_filterChain1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD_WITH_AUTOWIRED"
+      name: "jwtUtil"
+      modelFingerprint: "0B106121038C36558F6285187204F273"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.org.spemajorbackend.utils.JwtUtil"
+        uuid: "jwtUtil1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD_WITH_AUTOWIRED"
+      name: "jwtService"
+      modelFingerprint: "D6CC00078D5FF993E58DC91F657D7B7E"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.org.spemajorbackend.service.JwtService"
+        uuid: "jwtService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "56b6706d-d350-3c34-a37b-6e767c60a092"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path7"
+    pathIdForUser: "path3"
+    testPathName: "doFilterInternalWhenCaughtIllegalArgumentExceptionAndUsernameIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "99F9A44BA4EC9FB515DD11DA3D0F1A07"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.IllegalArgumentException"
+    truncated: true
+    inputParameters: []
+    uuid: "c03689f9-5192-303d-b7fb-4df96d3dcb71"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path11"
+    pathIdForUser: "path4"
+    testPathName: "doFilterInternalWhenCaughtExpiredJwtExceptionAndUsernameIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D0ACC7B38607EDD3C6A2D328BB895118"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 3
+      catchExceptions:
+      - "io.jsonwebtoken.ExpiredJwtException"
+    truncated: true
+    inputParameters: []
+    uuid: "30c2cd6d-1738-30d7-8838-483221d93d91"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path15"
+    pathIdForUser: "path5"
+    testPathName: "doFilterInternalWhenCaughtExceptionAndUsernameIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D8416898794450B33AFDAC898917DD6C"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 4
+      catchExceptions:
+      - "java.lang.Exception"
+    truncated: true
+    inputParameters: []
+    uuid: "cb97e4a8-2aea-3a43-9f4c-2e1b4aa63588"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path8"
+    pathIdForUser: "path6"
+    testPathName: "doFilterInternalWhenRequestTokenHeaderIsNullAndCaughtIllegalArgumentExceptionAndUsernameIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D81A8FA66F5355152AD030A3476C2AF5"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.IllegalArgumentException"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.config.JwtRequestFilter"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.config.JwtRequestFilter"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.config.JwtRequestFilter"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "request"
+      modelFingerprint: "AC676A6669247E308455623F151FB82A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.http.HttpServletRequest"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.http.HttpServletRequest"
+        uuid: "doFilterInternal_httpServletRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "response"
+      modelFingerprint: "06354CDD55D79979B243A5C27B291A75"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.http.HttpServletResponse"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.http.HttpServletResponse"
+        uuid: "doFilterInternal_httpServletResponse1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "filterChain"
+      modelFingerprint: "DDE5370466F0549E3CB8F0FBF96BA8C0"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.FilterChain"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.FilterChain"
+        uuid: "doFilterInternal_filterChain1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "filterChain"
+      modelFingerprint: "38AFF5EAE16468D7ADD038B4EEC54863"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.FilterChain"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.FilterChain"
+        uuid: "doFilterInternal_filterChain1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "filterChain"
+        name: "doFilter"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "javax.servlet.http.HttpServletRequest"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "javax.servlet.http.HttpServletRequest"
+            uuid: "doFilterInternal_httpServletRequest1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "arg1"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "javax.servlet.http.HttpServletResponse"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "javax.servlet.http.HttpServletResponse"
+            uuid: "doFilterInternal_httpServletResponse1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.io.IOException"
+        - "javax.servlet.ServletException"
+        signature: "doFilter(HttpServletRequest,HttpServletResponse): void throws\
+          \ java.io.IOException,javax.servlet.ServletException"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "doFilterInternal_void2"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD_WITH_AUTOWIRED"
+      name: "jwtUtil"
+      modelFingerprint: "0B106121038C36558F6285187204F273"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.org.spemajorbackend.utils.JwtUtil"
+        uuid: "jwtUtil1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD_WITH_AUTOWIRED"
+      name: "jwtService"
+      modelFingerprint: "D6CC00078D5FF993E58DC91F657D7B7E"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.org.spemajorbackend.service.JwtService"
+        uuid: "jwtService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "fe2d4c60-9882-3114-b722-53ae861e2477"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path12"
+    pathIdForUser: "path7"
+    testPathName: "doFilterInternalWhenRequestTokenHeaderIsNullAndCaughtExpiredJwtExceptionAndUsernameIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "8F19EF7B020E1BD732FAF2B0CE0E9EBE"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 3
+      catchExceptions:
+      - "io.jsonwebtoken.ExpiredJwtException"
+    truncated: true
+    inputParameters: []
+    uuid: "dc634a7e-2921-30a9-934f-e3e6ffed4bd4"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path16"
+    pathIdForUser: "path8"
+    testPathName: "doFilterInternalWhenRequestTokenHeaderIsNullAndCaughtExceptionAndUsernameIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "4B7A0DD47917F19213F4452526FED840"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 4
+      catchExceptions:
+      - "java.lang.Exception"
+    truncated: true
+    inputParameters: []
+    uuid: "c5962db5-8ebe-3ded-9249-ba079d2a4e2f"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path1"
+    pathIdForUser: "path9"
+    testPathName: "doFilterInternalWhenJwtUtilValidateTokenJwtTokenUserDetails"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "0065B6C1AB4AADDFC32296F8A0268790"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.config.JwtRequestFilter"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            jwtService:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.JwtService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.JwtService"
+              uuid: "jwtService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            jwtUtil:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.utils.JwtUtil"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.utils.JwtUtil"
+              uuid: "jwtUtil1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.config.JwtRequestFilter"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            jwtService:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.JwtService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.JwtService"
+              uuid: "jwtService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            jwtUtil:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.utils.JwtUtil"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.utils.JwtUtil"
+              uuid: "jwtUtil1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.org.spemajorbackend.config.JwtRequestFilter"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "request"
+      modelFingerprint: "AC676A6669247E308455623F151FB82A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.http.HttpServletRequest"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.http.HttpServletRequest"
+        uuid: "doFilterInternal_httpServletRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "response"
+      modelFingerprint: "06354CDD55D79979B243A5C27B291A75"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.http.HttpServletResponse"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.http.HttpServletResponse"
+        uuid: "doFilterInternal_httpServletResponse1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "filterChain"
+      modelFingerprint: "DDE5370466F0549E3CB8F0FBF96BA8C0"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.FilterChain"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.FilterChain"
+        uuid: "doFilterInternal_filterChain1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "jwtUtil"
+      modelFingerprint: "1B6AAFEEEF0F1AC68B2F4A724282D928"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 2
+      - 3
+      - 4
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.utils.JwtUtil"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.utils.JwtUtil"
+        uuid: "jwtUtil1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.jwtUtil"
+        name: "getUserNameFromToken"
+        parameters:
+        - name: "token"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "H"
+            suggestedContent: !<regular>
+              value: "H"
+            valueType: "java.lang.String"
+            uuid: "doFilterInternal_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getUserNameFromToken(String): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getUserNameFromToken1"
+          valueType: "java.lang.String"
+          uuid: "doFilterInternal_string3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SecurityContextHolder"
+      modelFingerprint: "18C39419270079F9DB6715B7EB51C7B0"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.security.core.context.SecurityContextHolder"
+        uuid: "org.springframework.security.core.context.SecurityContextHolder"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContextHolder"
+        name: "getContext"
+        parameters: []
+        signature: "getContext(): SecurityContext"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.springframework.security.core.context.SecurityContextHolder"
+            method: "getContext"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.springframework.security.core.context.SecurityContextHolder"
+            method: "getContext"
+            methodParameters: []
+          valueType: "org.springframework.security.core.context.SecurityContext"
+          uuid: "doFilterInternal_securityContext1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "BCE0136ACA35BAB688050FAB22689154"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.springframework.security.core.context.SecurityContextHolder"
+          method: "getContext"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.springframework.security.core.context.SecurityContextHolder"
+          method: "getContext"
+          methodParameters: []
+        valueType: "org.springframework.security.core.context.SecurityContext"
+        uuid: "doFilterInternal_securityContext1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContext"
+        name: "getAuthentication"
+        parameters: []
+        signature: "getAuthentication(): Authentication"
+        returnValue:
+          sapientType: "NULL"
+          content: !<method_return_from_value>
+            target: "org.springframework.security.core.Authentication"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.security.core.context.SecurityContextHolder"
+                method: "getContext"
+                methodParameters: []
+              valueType: "org.springframework.security.core.context.SecurityContext"
+              uuid: "doFilterInternal_securityContext1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "getAuthentication"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.security.core.Authentication"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.security.core.context.SecurityContextHolder"
+                method: "getContext"
+                methodParameters: []
+              valueType: "org.springframework.security.core.context.SecurityContext"
+              uuid: "doFilterInternal_securityContext1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "getAuthentication"
+          valueType: "org.springframework.security.core.Authentication"
+          uuid: "doFilterInternal_authentication1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "jwtService"
+      modelFingerprint: "820C3B3CD668FD6452F25C6B5468F7D4"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.JwtService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.JwtService"
+        uuid: "jwtService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.jwtService"
+        name: "loadUserByUsername"
+        parameters:
+        - name: "username"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getUserNameFromToken1"
+            valueType: "java.lang.String"
+            uuid: "doFilterInternal_string3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.springframework.security.core.userdetails.UsernameNotFoundException"
+        signature: "loadUserByUsername(String): UserDetails throws org.springframework.security.core.userdetails.UsernameNotFoundException"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.springframework.security.core.userdetails.UserDetails"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.springframework.security.core.userdetails.UserDetails"
+          uuid: "doFilterInternal_userDetails1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "jwtUtil"
+      modelFingerprint: "CC72C12D458BCAFA0AD48528AD0A1AEC"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.utils.JwtUtil"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.utils.JwtUtil"
+        uuid: "jwtUtil1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.jwtUtil"
+        name: "validateToken"
+        parameters:
+        - name: "token"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "H"
+            suggestedContent: !<regular>
+              value: "H"
+            valueType: "java.lang.String"
+            uuid: "doFilterInternal_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "userDetails"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.springframework.security.core.userdetails.UserDetails"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.springframework.security.core.userdetails.UserDetails"
+            uuid: "doFilterInternal_userDetails1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "validateToken(String,UserDetails): Boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "java.lang.Boolean"
+          uuid: "doFilterInternal_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "userDetails"
+      modelFingerprint: "43FAE86C0E5D74762BA9EA57A513C2BF"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.springframework.security.core.userdetails.UserDetails"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.springframework.security.core.userdetails.UserDetails"
+        uuid: "doFilterInternal_userDetails1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "userDetails"
+        name: "getAuthorities"
+        parameters: []
+        signature: "getAuthorities(): Collection"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          suggestedContent: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.Collection"
+          genericValueType: "? extends org.springframework.security.core.GrantedAuthority"
+          uuid: "doFilterInternal_collection1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "F268702D330A6F3378E4C0D772CB4E5E"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+        uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+        name: "buildDetails"
+        parameters:
+        - name: "context"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "javax.servlet.http.HttpServletRequest"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "javax.servlet.http.HttpServletRequest"
+            uuid: "doFilterInternal_httpServletRequest1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "buildDetails(HttpServletRequest): WebAuthenticationDetails"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+              uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "context"
+              value:
+                sapientType: "NULL"
+                suggestedContent: !<unknown_object>
+                  target: "javax.servlet.http.HttpServletRequest"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "javax.servlet.http.HttpServletRequest"
+                uuid: "doFilterInternal_httpServletRequest1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "buildDetails"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+              uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "context"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<unknown_object>
+                  target: "javax.servlet.http.HttpServletRequest"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "javax.servlet.http.HttpServletRequest"
+                uuid: "doFilterInternal_httpServletRequest1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "buildDetails"
+          valueType: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+          uuid: "doFilterInternal_webAuthenticationDetails1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SecurityContextHolder"
+      modelFingerprint: "44821213A6B2DB81E932821C9283C1CD"
+      index: 12
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.security.core.context.SecurityContextHolder"
+        uuid: "org.springframework.security.core.context.SecurityContextHolder"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContextHolder"
+        name: "getContext"
+        parameters: []
+        signature: "getContext(): SecurityContext"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.springframework.security.core.context.SecurityContext"
+          uuid: "doFilterInternal_securityContext2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "23214D08FFD83155D2CA0D127061F127"
+      index: 13
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.security.core.context.SecurityContext"
+        uuid: "doFilterInternal_securityContext2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContext"
+        name: "setAuthentication"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.springframework.security.authentication.UsernamePasswordAuthenticationToken"
+              parameters:
+              - name: "principal"
+                value:
+                  sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.springframework.security.core.userdetails.UserDetails"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.springframework.security.core.userdetails.UserDetails"
+                  uuid: "doFilterInternal_userDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "credentials"
+                value:
+                  sapientType: "NULL"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "authorities"
+                value:
+                  sapientType: "COLLECTION"
+                  content: !<collection>
+                    parameters: []
+                    values: []
+                  suggestedContent: !<collection>
+                    parameters: []
+                    values: []
+                  valueType: "java.util.Collection"
+                  genericValueType: "? extends org.springframework.security.core.GrantedAuthority"
+                  uuid: "doFilterInternal_collection1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: true
+              propertiesMap:
+                details:
+                  sapientType: "OBJECT"
+                  content: !<method_return_from_value>
+                    target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      content: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      suggestedContent: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                      uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "context"
+                      value:
+                        sapientType: "NULL"
+                        suggestedContent: !<unknown_object>
+                          target: "javax.servlet.http.HttpServletRequest"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "javax.servlet.http.HttpServletRequest"
+                        uuid: "doFilterInternal_httpServletRequest1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "buildDetails"
+                  suggestedContent: !<method_return_from_value>
+                    target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      suggestedContent: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                      uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "context"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<unknown_object>
+                          target: "javax.servlet.http.HttpServletRequest"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "javax.servlet.http.HttpServletRequest"
+                        uuid: "doFilterInternal_httpServletRequest1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "buildDetails"
+                  valueType: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                  uuid: "doFilterInternal_webAuthenticationDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<new>
+              target: "org.springframework.security.authentication.UsernamePasswordAuthenticationToken"
+              parameters:
+              - name: "principal"
+                value:
+                  sapientType: "UNKNOWN"
+                  suggestedContent: !<unknown_object>
+                    target: "org.springframework.security.core.userdetails.UserDetails"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.springframework.security.core.userdetails.UserDetails"
+                  uuid: "doFilterInternal_userDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "credentials"
+                value:
+                  sapientType: "NULL"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "authorities"
+                value:
+                  sapientType: "COLLECTION"
+                  valueType: "java.util.Collection"
+                  genericValueType: "? extends org.springframework.security.core.GrantedAuthority"
+                  uuid: "doFilterInternal_collection1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: true
+              propertiesMap:
+                details:
+                  sapientType: "OBJECT"
+                  suggestedContent: !<method_return_from_value>
+                    target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      suggestedContent: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                      uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "context"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<unknown_object>
+                          target: "javax.servlet.http.HttpServletRequest"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "javax.servlet.http.HttpServletRequest"
+                        uuid: "doFilterInternal_httpServletRequest1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "buildDetails"
+                  valueType: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                  uuid: "doFilterInternal_webAuthenticationDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "org.springframework.security.authentication.UsernamePasswordAuthenticationToken"
+            uuid: "doFilterInternal_usernamePasswordAuthenticationToken1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setAuthentication(UsernamePasswordAuthenticationToken): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "doFilterInternal_void2"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 14
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "bd298aad-e84c-38d3-8104-9b6f93d3a7fe"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path2"
+    pathIdForUser: "path10"
+    testPathName: "doFilterInternalWhenJwtUtilNotValidateTokenJwtTokenUserDetails"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "C1E6147B886688A2A03E8AA090746249"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "93bd15d7-1f7a-3666-8242-6d9c62dd94c5"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path5"
+    pathIdForUser: "path11"
+    testPathName: "doFilterInternalWhenSecurityContextHolderGetContextGetAuthenticationIsNullAndJwtUtilValidateTokenJwtTokenUserDetails"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "43C7F4BF59C5921AE09B3D79269CE5F2"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.IllegalArgumentException"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.config.JwtRequestFilter"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            jwtService:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.JwtService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.JwtService"
+              uuid: "jwtService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            jwtUtil:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.utils.JwtUtil"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.utils.JwtUtil"
+              uuid: "jwtUtil1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.config.JwtRequestFilter"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            jwtService:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.JwtService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.JwtService"
+              uuid: "jwtService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            jwtUtil:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.utils.JwtUtil"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.utils.JwtUtil"
+              uuid: "jwtUtil1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.org.spemajorbackend.config.JwtRequestFilter"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "request"
+      modelFingerprint: "AC676A6669247E308455623F151FB82A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.http.HttpServletRequest"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.http.HttpServletRequest"
+        uuid: "doFilterInternal_httpServletRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "response"
+      modelFingerprint: "06354CDD55D79979B243A5C27B291A75"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.http.HttpServletResponse"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.http.HttpServletResponse"
+        uuid: "doFilterInternal_httpServletResponse1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "filterChain"
+      modelFingerprint: "DDE5370466F0549E3CB8F0FBF96BA8C0"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.FilterChain"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.FilterChain"
+        uuid: "doFilterInternal_filterChain1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "jwtUtil"
+      modelFingerprint: "1B6AAFEEEF0F1AC68B2F4A724282D928"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 2
+      - 3
+      - 4
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.utils.JwtUtil"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.utils.JwtUtil"
+        uuid: "jwtUtil1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.jwtUtil"
+        name: "getUserNameFromToken"
+        parameters:
+        - name: "token"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "H"
+            suggestedContent: !<regular>
+              value: "H"
+            valueType: "java.lang.String"
+            uuid: "doFilterInternal_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getUserNameFromToken(String): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getUserNameFromToken1"
+          valueType: "java.lang.String"
+          uuid: "doFilterInternal_string3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SecurityContextHolder"
+      modelFingerprint: "18C39419270079F9DB6715B7EB51C7B0"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.security.core.context.SecurityContextHolder"
+        uuid: "org.springframework.security.core.context.SecurityContextHolder"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContextHolder"
+        name: "getContext"
+        parameters: []
+        signature: "getContext(): SecurityContext"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.springframework.security.core.context.SecurityContextHolder"
+            method: "getContext"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.springframework.security.core.context.SecurityContextHolder"
+            method: "getContext"
+            methodParameters: []
+          valueType: "org.springframework.security.core.context.SecurityContext"
+          uuid: "doFilterInternal_securityContext1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "BCE0136ACA35BAB688050FAB22689154"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.springframework.security.core.context.SecurityContextHolder"
+          method: "getContext"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.springframework.security.core.context.SecurityContextHolder"
+          method: "getContext"
+          methodParameters: []
+        valueType: "org.springframework.security.core.context.SecurityContext"
+        uuid: "doFilterInternal_securityContext1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContext"
+        name: "getAuthentication"
+        parameters: []
+        signature: "getAuthentication(): Authentication"
+        returnValue:
+          sapientType: "NULL"
+          content: !<method_return_from_value>
+            target: "org.springframework.security.core.Authentication"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.security.core.context.SecurityContextHolder"
+                method: "getContext"
+                methodParameters: []
+              valueType: "org.springframework.security.core.context.SecurityContext"
+              uuid: "doFilterInternal_securityContext1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "getAuthentication"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.security.core.Authentication"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.security.core.context.SecurityContextHolder"
+                method: "getContext"
+                methodParameters: []
+              valueType: "org.springframework.security.core.context.SecurityContext"
+              uuid: "doFilterInternal_securityContext1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "getAuthentication"
+          valueType: "org.springframework.security.core.Authentication"
+          uuid: "doFilterInternal_authentication1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "jwtService"
+      modelFingerprint: "820C3B3CD668FD6452F25C6B5468F7D4"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.JwtService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.JwtService"
+        uuid: "jwtService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.jwtService"
+        name: "loadUserByUsername"
+        parameters:
+        - name: "username"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getUserNameFromToken1"
+            valueType: "java.lang.String"
+            uuid: "doFilterInternal_string3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.springframework.security.core.userdetails.UsernameNotFoundException"
+        signature: "loadUserByUsername(String): UserDetails throws org.springframework.security.core.userdetails.UsernameNotFoundException"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.springframework.security.core.userdetails.UserDetails"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.springframework.security.core.userdetails.UserDetails"
+          uuid: "doFilterInternal_userDetails1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "jwtUtil"
+      modelFingerprint: "CC72C12D458BCAFA0AD48528AD0A1AEC"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.utils.JwtUtil"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.utils.JwtUtil"
+        uuid: "jwtUtil1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.jwtUtil"
+        name: "validateToken"
+        parameters:
+        - name: "token"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "H"
+            suggestedContent: !<regular>
+              value: "H"
+            valueType: "java.lang.String"
+            uuid: "doFilterInternal_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "userDetails"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.springframework.security.core.userdetails.UserDetails"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.springframework.security.core.userdetails.UserDetails"
+            uuid: "doFilterInternal_userDetails1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "validateToken(String,UserDetails): Boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "java.lang.Boolean"
+          uuid: "doFilterInternal_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "userDetails"
+      modelFingerprint: "43FAE86C0E5D74762BA9EA57A513C2BF"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.springframework.security.core.userdetails.UserDetails"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.springframework.security.core.userdetails.UserDetails"
+        uuid: "doFilterInternal_userDetails1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "userDetails"
+        name: "getAuthorities"
+        parameters: []
+        signature: "getAuthorities(): Collection"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          suggestedContent: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.Collection"
+          genericValueType: "? extends org.springframework.security.core.GrantedAuthority"
+          uuid: "doFilterInternal_collection1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "F268702D330A6F3378E4C0D772CB4E5E"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+        uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+        name: "buildDetails"
+        parameters:
+        - name: "context"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "javax.servlet.http.HttpServletRequest"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "javax.servlet.http.HttpServletRequest"
+            uuid: "doFilterInternal_httpServletRequest1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "buildDetails(HttpServletRequest): WebAuthenticationDetails"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+              uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "context"
+              value:
+                sapientType: "NULL"
+                suggestedContent: !<unknown_object>
+                  target: "javax.servlet.http.HttpServletRequest"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "javax.servlet.http.HttpServletRequest"
+                uuid: "doFilterInternal_httpServletRequest1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "buildDetails"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+              uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "context"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<unknown_object>
+                  target: "javax.servlet.http.HttpServletRequest"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "javax.servlet.http.HttpServletRequest"
+                uuid: "doFilterInternal_httpServletRequest1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "buildDetails"
+          valueType: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+          uuid: "doFilterInternal_webAuthenticationDetails1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SecurityContextHolder"
+      modelFingerprint: "44821213A6B2DB81E932821C9283C1CD"
+      index: 12
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.security.core.context.SecurityContextHolder"
+        uuid: "org.springframework.security.core.context.SecurityContextHolder"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContextHolder"
+        name: "getContext"
+        parameters: []
+        signature: "getContext(): SecurityContext"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.springframework.security.core.context.SecurityContext"
+          uuid: "doFilterInternal_securityContext2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "23214D08FFD83155D2CA0D127061F127"
+      index: 13
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.security.core.context.SecurityContext"
+        uuid: "doFilterInternal_securityContext2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContext"
+        name: "setAuthentication"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.springframework.security.authentication.UsernamePasswordAuthenticationToken"
+              parameters:
+              - name: "principal"
+                value:
+                  sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.springframework.security.core.userdetails.UserDetails"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.springframework.security.core.userdetails.UserDetails"
+                  uuid: "doFilterInternal_userDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "credentials"
+                value:
+                  sapientType: "NULL"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "authorities"
+                value:
+                  sapientType: "COLLECTION"
+                  content: !<collection>
+                    parameters: []
+                    values: []
+                  suggestedContent: !<collection>
+                    parameters: []
+                    values: []
+                  valueType: "java.util.Collection"
+                  genericValueType: "? extends org.springframework.security.core.GrantedAuthority"
+                  uuid: "doFilterInternal_collection1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: true
+              propertiesMap:
+                details:
+                  sapientType: "OBJECT"
+                  content: !<method_return_from_value>
+                    target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      content: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      suggestedContent: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                      uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "context"
+                      value:
+                        sapientType: "NULL"
+                        suggestedContent: !<unknown_object>
+                          target: "javax.servlet.http.HttpServletRequest"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "javax.servlet.http.HttpServletRequest"
+                        uuid: "doFilterInternal_httpServletRequest1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "buildDetails"
+                  suggestedContent: !<method_return_from_value>
+                    target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      suggestedContent: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                      uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "context"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<unknown_object>
+                          target: "javax.servlet.http.HttpServletRequest"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "javax.servlet.http.HttpServletRequest"
+                        uuid: "doFilterInternal_httpServletRequest1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "buildDetails"
+                  valueType: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                  uuid: "doFilterInternal_webAuthenticationDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<new>
+              target: "org.springframework.security.authentication.UsernamePasswordAuthenticationToken"
+              parameters:
+              - name: "principal"
+                value:
+                  sapientType: "UNKNOWN"
+                  suggestedContent: !<unknown_object>
+                    target: "org.springframework.security.core.userdetails.UserDetails"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.springframework.security.core.userdetails.UserDetails"
+                  uuid: "doFilterInternal_userDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "credentials"
+                value:
+                  sapientType: "NULL"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "authorities"
+                value:
+                  sapientType: "COLLECTION"
+                  valueType: "java.util.Collection"
+                  genericValueType: "? extends org.springframework.security.core.GrantedAuthority"
+                  uuid: "doFilterInternal_collection1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: true
+              propertiesMap:
+                details:
+                  sapientType: "OBJECT"
+                  suggestedContent: !<method_return_from_value>
+                    target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      suggestedContent: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                      uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "context"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<unknown_object>
+                          target: "javax.servlet.http.HttpServletRequest"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "javax.servlet.http.HttpServletRequest"
+                        uuid: "doFilterInternal_httpServletRequest1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "buildDetails"
+                  valueType: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                  uuid: "doFilterInternal_webAuthenticationDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "org.springframework.security.authentication.UsernamePasswordAuthenticationToken"
+            uuid: "doFilterInternal_usernamePasswordAuthenticationToken1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setAuthentication(UsernamePasswordAuthenticationToken): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "doFilterInternal_void3"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "filterChain"
+      modelFingerprint: "38AFF5EAE16468D7ADD038B4EEC54863"
+      index: 14
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.FilterChain"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.FilterChain"
+        uuid: "doFilterInternal_filterChain1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "filterChain"
+        name: "doFilter"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "javax.servlet.http.HttpServletRequest"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "javax.servlet.http.HttpServletRequest"
+            uuid: "doFilterInternal_httpServletRequest1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "arg1"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "javax.servlet.http.HttpServletResponse"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "javax.servlet.http.HttpServletResponse"
+            uuid: "doFilterInternal_httpServletResponse1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.io.IOException"
+        - "javax.servlet.ServletException"
+        signature: "doFilter(HttpServletRequest,HttpServletResponse): void throws\
+          \ java.io.IOException,javax.servlet.ServletException"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "doFilterInternal_void4"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 15
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "3d709961-38d5-340e-a650-5b0623df983d"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path6"
+    pathIdForUser: "path12"
+    testPathName: "doFilterInternalWhenSecurityContextHolderGetContextGetAuthenticationIsNullAndJwtUtilNotValidateTokenJwtTokenUserDetails"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D5031F0E9B8954AF4F88F8E95808B7BA"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.IllegalArgumentException"
+    truncated: true
+    inputParameters: []
+    uuid: "5d6a3b86-ced5-36bd-8b74-fafe663ad8a2"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path9"
+    pathIdForUser: "path13"
+    testPathName: "doFilterInternalWhenUsernameIsNotNullAndSecurityContextHolderGetContextGetAuthenticationIsNullAndJwtUtilValidateTokenJw"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "73FD5E1EF725E37B10662320A9CA9360"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 3
+      catchExceptions:
+      - "io.jsonwebtoken.ExpiredJwtException"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.config.JwtRequestFilter"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            jwtService:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.JwtService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.JwtService"
+              uuid: "jwtService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            jwtUtil:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.utils.JwtUtil"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.utils.JwtUtil"
+              uuid: "jwtUtil1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.config.JwtRequestFilter"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            jwtService:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.JwtService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.JwtService"
+              uuid: "jwtService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            jwtUtil:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.utils.JwtUtil"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.utils.JwtUtil"
+              uuid: "jwtUtil1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.org.spemajorbackend.config.JwtRequestFilter"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "request"
+      modelFingerprint: "AC676A6669247E308455623F151FB82A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.http.HttpServletRequest"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.http.HttpServletRequest"
+        uuid: "doFilterInternal_httpServletRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "response"
+      modelFingerprint: "06354CDD55D79979B243A5C27B291A75"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.http.HttpServletResponse"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.http.HttpServletResponse"
+        uuid: "doFilterInternal_httpServletResponse1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "filterChain"
+      modelFingerprint: "DDE5370466F0549E3CB8F0FBF96BA8C0"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.FilterChain"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.FilterChain"
+        uuid: "doFilterInternal_filterChain1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "jwtUtil"
+      modelFingerprint: "1B6AAFEEEF0F1AC68B2F4A724282D928"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 2
+      - 3
+      - 4
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.utils.JwtUtil"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.utils.JwtUtil"
+        uuid: "jwtUtil1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.jwtUtil"
+        name: "getUserNameFromToken"
+        parameters:
+        - name: "token"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "H"
+            suggestedContent: !<regular>
+              value: "H"
+            valueType: "java.lang.String"
+            uuid: "doFilterInternal_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getUserNameFromToken(String): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getUserNameFromToken1"
+          valueType: "java.lang.String"
+          uuid: "doFilterInternal_string3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SecurityContextHolder"
+      modelFingerprint: "18C39419270079F9DB6715B7EB51C7B0"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.security.core.context.SecurityContextHolder"
+        uuid: "org.springframework.security.core.context.SecurityContextHolder"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContextHolder"
+        name: "getContext"
+        parameters: []
+        signature: "getContext(): SecurityContext"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.springframework.security.core.context.SecurityContextHolder"
+            method: "getContext"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.springframework.security.core.context.SecurityContextHolder"
+            method: "getContext"
+            methodParameters: []
+          valueType: "org.springframework.security.core.context.SecurityContext"
+          uuid: "doFilterInternal_securityContext1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "BCE0136ACA35BAB688050FAB22689154"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.springframework.security.core.context.SecurityContextHolder"
+          method: "getContext"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.springframework.security.core.context.SecurityContextHolder"
+          method: "getContext"
+          methodParameters: []
+        valueType: "org.springframework.security.core.context.SecurityContext"
+        uuid: "doFilterInternal_securityContext1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContext"
+        name: "getAuthentication"
+        parameters: []
+        signature: "getAuthentication(): Authentication"
+        returnValue:
+          sapientType: "NULL"
+          content: !<method_return_from_value>
+            target: "org.springframework.security.core.Authentication"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.security.core.context.SecurityContextHolder"
+                method: "getContext"
+                methodParameters: []
+              valueType: "org.springframework.security.core.context.SecurityContext"
+              uuid: "doFilterInternal_securityContext1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "getAuthentication"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.security.core.Authentication"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.security.core.context.SecurityContextHolder"
+                method: "getContext"
+                methodParameters: []
+              valueType: "org.springframework.security.core.context.SecurityContext"
+              uuid: "doFilterInternal_securityContext1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "getAuthentication"
+          valueType: "org.springframework.security.core.Authentication"
+          uuid: "doFilterInternal_authentication1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "jwtService"
+      modelFingerprint: "820C3B3CD668FD6452F25C6B5468F7D4"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.JwtService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.JwtService"
+        uuid: "jwtService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.jwtService"
+        name: "loadUserByUsername"
+        parameters:
+        - name: "username"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getUserNameFromToken1"
+            valueType: "java.lang.String"
+            uuid: "doFilterInternal_string3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.springframework.security.core.userdetails.UsernameNotFoundException"
+        signature: "loadUserByUsername(String): UserDetails throws org.springframework.security.core.userdetails.UsernameNotFoundException"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.springframework.security.core.userdetails.UserDetails"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.springframework.security.core.userdetails.UserDetails"
+          uuid: "doFilterInternal_userDetails1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "jwtUtil"
+      modelFingerprint: "CC72C12D458BCAFA0AD48528AD0A1AEC"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.utils.JwtUtil"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.utils.JwtUtil"
+        uuid: "jwtUtil1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.jwtUtil"
+        name: "validateToken"
+        parameters:
+        - name: "token"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "H"
+            suggestedContent: !<regular>
+              value: "H"
+            valueType: "java.lang.String"
+            uuid: "doFilterInternal_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "userDetails"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.springframework.security.core.userdetails.UserDetails"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.springframework.security.core.userdetails.UserDetails"
+            uuid: "doFilterInternal_userDetails1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "validateToken(String,UserDetails): Boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "java.lang.Boolean"
+          uuid: "doFilterInternal_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "userDetails"
+      modelFingerprint: "43FAE86C0E5D74762BA9EA57A513C2BF"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.springframework.security.core.userdetails.UserDetails"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.springframework.security.core.userdetails.UserDetails"
+        uuid: "doFilterInternal_userDetails1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "userDetails"
+        name: "getAuthorities"
+        parameters: []
+        signature: "getAuthorities(): Collection"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          suggestedContent: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.Collection"
+          genericValueType: "? extends org.springframework.security.core.GrantedAuthority"
+          uuid: "doFilterInternal_collection1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "F268702D330A6F3378E4C0D772CB4E5E"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+        uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+        name: "buildDetails"
+        parameters:
+        - name: "context"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "javax.servlet.http.HttpServletRequest"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "javax.servlet.http.HttpServletRequest"
+            uuid: "doFilterInternal_httpServletRequest1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "buildDetails(HttpServletRequest): WebAuthenticationDetails"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+              uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "context"
+              value:
+                sapientType: "NULL"
+                suggestedContent: !<unknown_object>
+                  target: "javax.servlet.http.HttpServletRequest"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "javax.servlet.http.HttpServletRequest"
+                uuid: "doFilterInternal_httpServletRequest1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "buildDetails"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+              uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "context"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<unknown_object>
+                  target: "javax.servlet.http.HttpServletRequest"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "javax.servlet.http.HttpServletRequest"
+                uuid: "doFilterInternal_httpServletRequest1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "buildDetails"
+          valueType: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+          uuid: "doFilterInternal_webAuthenticationDetails1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SecurityContextHolder"
+      modelFingerprint: "44821213A6B2DB81E932821C9283C1CD"
+      index: 12
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.security.core.context.SecurityContextHolder"
+        uuid: "org.springframework.security.core.context.SecurityContextHolder"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContextHolder"
+        name: "getContext"
+        parameters: []
+        signature: "getContext(): SecurityContext"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.springframework.security.core.context.SecurityContext"
+          uuid: "doFilterInternal_securityContext2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "23214D08FFD83155D2CA0D127061F127"
+      index: 13
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.security.core.context.SecurityContext"
+        uuid: "doFilterInternal_securityContext2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContext"
+        name: "setAuthentication"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.springframework.security.authentication.UsernamePasswordAuthenticationToken"
+              parameters:
+              - name: "principal"
+                value:
+                  sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.springframework.security.core.userdetails.UserDetails"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.springframework.security.core.userdetails.UserDetails"
+                  uuid: "doFilterInternal_userDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "credentials"
+                value:
+                  sapientType: "NULL"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "authorities"
+                value:
+                  sapientType: "COLLECTION"
+                  content: !<collection>
+                    parameters: []
+                    values: []
+                  suggestedContent: !<collection>
+                    parameters: []
+                    values: []
+                  valueType: "java.util.Collection"
+                  genericValueType: "? extends org.springframework.security.core.GrantedAuthority"
+                  uuid: "doFilterInternal_collection1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: true
+              propertiesMap:
+                details:
+                  sapientType: "OBJECT"
+                  content: !<method_return_from_value>
+                    target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      content: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      suggestedContent: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                      uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "context"
+                      value:
+                        sapientType: "NULL"
+                        suggestedContent: !<unknown_object>
+                          target: "javax.servlet.http.HttpServletRequest"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "javax.servlet.http.HttpServletRequest"
+                        uuid: "doFilterInternal_httpServletRequest1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "buildDetails"
+                  suggestedContent: !<method_return_from_value>
+                    target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      suggestedContent: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                      uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "context"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<unknown_object>
+                          target: "javax.servlet.http.HttpServletRequest"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "javax.servlet.http.HttpServletRequest"
+                        uuid: "doFilterInternal_httpServletRequest1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "buildDetails"
+                  valueType: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                  uuid: "doFilterInternal_webAuthenticationDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<new>
+              target: "org.springframework.security.authentication.UsernamePasswordAuthenticationToken"
+              parameters:
+              - name: "principal"
+                value:
+                  sapientType: "UNKNOWN"
+                  suggestedContent: !<unknown_object>
+                    target: "org.springframework.security.core.userdetails.UserDetails"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.springframework.security.core.userdetails.UserDetails"
+                  uuid: "doFilterInternal_userDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "credentials"
+                value:
+                  sapientType: "NULL"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "authorities"
+                value:
+                  sapientType: "COLLECTION"
+                  valueType: "java.util.Collection"
+                  genericValueType: "? extends org.springframework.security.core.GrantedAuthority"
+                  uuid: "doFilterInternal_collection1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: true
+              propertiesMap:
+                details:
+                  sapientType: "OBJECT"
+                  suggestedContent: !<method_return_from_value>
+                    target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      suggestedContent: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                      uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "context"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<unknown_object>
+                          target: "javax.servlet.http.HttpServletRequest"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "javax.servlet.http.HttpServletRequest"
+                        uuid: "doFilterInternal_httpServletRequest1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "buildDetails"
+                  valueType: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                  uuid: "doFilterInternal_webAuthenticationDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "org.springframework.security.authentication.UsernamePasswordAuthenticationToken"
+            uuid: "doFilterInternal_usernamePasswordAuthenticationToken1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setAuthentication(UsernamePasswordAuthenticationToken): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "doFilterInternal_void3"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "filterChain"
+      modelFingerprint: "38AFF5EAE16468D7ADD038B4EEC54863"
+      index: 14
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.FilterChain"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.FilterChain"
+        uuid: "doFilterInternal_filterChain1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "filterChain"
+        name: "doFilter"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "javax.servlet.http.HttpServletRequest"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "javax.servlet.http.HttpServletRequest"
+            uuid: "doFilterInternal_httpServletRequest1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "arg1"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "javax.servlet.http.HttpServletResponse"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "javax.servlet.http.HttpServletResponse"
+            uuid: "doFilterInternal_httpServletResponse1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.io.IOException"
+        - "javax.servlet.ServletException"
+        signature: "doFilter(HttpServletRequest,HttpServletResponse): void throws\
+          \ java.io.IOException,javax.servlet.ServletException"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "doFilterInternal_void4"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 15
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "abb8e30c-aebb-374b-9531-d7242677954f"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path10"
+    pathIdForUser: "path14"
+    testPathName: "doFilterInternalWhenUsernameIsNotNullAndSecurityContextHolderGetContextGetAuthenticationIsNullAndJwtUtilNotValidateToke"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A499689773852C6309F9EB21AE06619C"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 3
+      catchExceptions:
+      - "io.jsonwebtoken.ExpiredJwtException"
+    truncated: true
+    inputParameters: []
+    uuid: "55bac2ba-70ac-3c14-943c-7f809bf577d7"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path13"
+    pathIdForUser: "path15"
+    testPathName: "doFilterInternalWhenSecurityContextHolderGetContextGetAuthenticationIsNullAndJwtUtilValidateTokenJwtTokenUserDetails2"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "0B8FA5C046FEB252A8BDDF679612A2EF"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 4
+      catchExceptions:
+      - "java.lang.Exception"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.config.JwtRequestFilter"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            jwtService:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.JwtService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.JwtService"
+              uuid: "jwtService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            jwtUtil:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.utils.JwtUtil"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.utils.JwtUtil"
+              uuid: "jwtUtil1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.config.JwtRequestFilter"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            jwtService:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.JwtService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.JwtService"
+              uuid: "jwtService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            jwtUtil:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.utils.JwtUtil"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.utils.JwtUtil"
+              uuid: "jwtUtil1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.org.spemajorbackend.config.JwtRequestFilter"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "request"
+      modelFingerprint: "AC676A6669247E308455623F151FB82A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.http.HttpServletRequest"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.http.HttpServletRequest"
+        uuid: "doFilterInternal_httpServletRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "response"
+      modelFingerprint: "06354CDD55D79979B243A5C27B291A75"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.http.HttpServletResponse"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.http.HttpServletResponse"
+        uuid: "doFilterInternal_httpServletResponse1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "filterChain"
+      modelFingerprint: "DDE5370466F0549E3CB8F0FBF96BA8C0"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.FilterChain"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.FilterChain"
+        uuid: "doFilterInternal_filterChain1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "jwtUtil"
+      modelFingerprint: "1B6AAFEEEF0F1AC68B2F4A724282D928"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 2
+      - 3
+      - 4
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.utils.JwtUtil"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.utils.JwtUtil"
+        uuid: "jwtUtil1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.jwtUtil"
+        name: "getUserNameFromToken"
+        parameters:
+        - name: "token"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "H"
+            suggestedContent: !<regular>
+              value: "H"
+            valueType: "java.lang.String"
+            uuid: "doFilterInternal_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getUserNameFromToken(String): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getUserNameFromToken1"
+          valueType: "java.lang.String"
+          uuid: "doFilterInternal_string3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SecurityContextHolder"
+      modelFingerprint: "18C39419270079F9DB6715B7EB51C7B0"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.security.core.context.SecurityContextHolder"
+        uuid: "org.springframework.security.core.context.SecurityContextHolder"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContextHolder"
+        name: "getContext"
+        parameters: []
+        signature: "getContext(): SecurityContext"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.springframework.security.core.context.SecurityContextHolder"
+            method: "getContext"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.springframework.security.core.context.SecurityContextHolder"
+            method: "getContext"
+            methodParameters: []
+          valueType: "org.springframework.security.core.context.SecurityContext"
+          uuid: "doFilterInternal_securityContext1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "BCE0136ACA35BAB688050FAB22689154"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.springframework.security.core.context.SecurityContextHolder"
+          method: "getContext"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.springframework.security.core.context.SecurityContextHolder"
+          method: "getContext"
+          methodParameters: []
+        valueType: "org.springframework.security.core.context.SecurityContext"
+        uuid: "doFilterInternal_securityContext1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContext"
+        name: "getAuthentication"
+        parameters: []
+        signature: "getAuthentication(): Authentication"
+        returnValue:
+          sapientType: "NULL"
+          content: !<method_return_from_value>
+            target: "org.springframework.security.core.Authentication"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.security.core.context.SecurityContextHolder"
+                method: "getContext"
+                methodParameters: []
+              valueType: "org.springframework.security.core.context.SecurityContext"
+              uuid: "doFilterInternal_securityContext1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "getAuthentication"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.security.core.Authentication"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.security.core.context.SecurityContextHolder"
+                method: "getContext"
+                methodParameters: []
+              valueType: "org.springframework.security.core.context.SecurityContext"
+              uuid: "doFilterInternal_securityContext1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "getAuthentication"
+          valueType: "org.springframework.security.core.Authentication"
+          uuid: "doFilterInternal_authentication1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "jwtService"
+      modelFingerprint: "820C3B3CD668FD6452F25C6B5468F7D4"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.JwtService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.JwtService"
+        uuid: "jwtService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.jwtService"
+        name: "loadUserByUsername"
+        parameters:
+        - name: "username"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getUserNameFromToken1"
+            valueType: "java.lang.String"
+            uuid: "doFilterInternal_string3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.springframework.security.core.userdetails.UsernameNotFoundException"
+        signature: "loadUserByUsername(String): UserDetails throws org.springframework.security.core.userdetails.UsernameNotFoundException"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.springframework.security.core.userdetails.UserDetails"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.springframework.security.core.userdetails.UserDetails"
+          uuid: "doFilterInternal_userDetails1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "jwtUtil"
+      modelFingerprint: "CC72C12D458BCAFA0AD48528AD0A1AEC"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.utils.JwtUtil"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.utils.JwtUtil"
+        uuid: "jwtUtil1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.jwtUtil"
+        name: "validateToken"
+        parameters:
+        - name: "token"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "H"
+            suggestedContent: !<regular>
+              value: "H"
+            valueType: "java.lang.String"
+            uuid: "doFilterInternal_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "userDetails"
+          value:
+            sapientType: "MOCK"
+            suggestedContent: !<unknown_object>
+              target: "org.springframework.security.core.userdetails.UserDetails"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "org.springframework.security.core.userdetails.UserDetails"
+            uuid: "doFilterInternal_userDetails1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "validateToken(String,UserDetails): Boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "java.lang.Boolean"
+          uuid: "doFilterInternal_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "userDetails"
+      modelFingerprint: "43FAE86C0E5D74762BA9EA57A513C2BF"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.springframework.security.core.userdetails.UserDetails"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.springframework.security.core.userdetails.UserDetails"
+        uuid: "doFilterInternal_userDetails1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "userDetails"
+        name: "getAuthorities"
+        parameters: []
+        signature: "getAuthorities(): Collection"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          suggestedContent: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.Collection"
+          genericValueType: "? extends org.springframework.security.core.GrantedAuthority"
+          uuid: "doFilterInternal_collection1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "F268702D330A6F3378E4C0D772CB4E5E"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+        uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+        name: "buildDetails"
+        parameters:
+        - name: "context"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "javax.servlet.http.HttpServletRequest"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "javax.servlet.http.HttpServletRequest"
+            uuid: "doFilterInternal_httpServletRequest1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "buildDetails(HttpServletRequest): WebAuthenticationDetails"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+              uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "context"
+              value:
+                sapientType: "NULL"
+                suggestedContent: !<unknown_object>
+                  target: "javax.servlet.http.HttpServletRequest"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "javax.servlet.http.HttpServletRequest"
+                uuid: "doFilterInternal_httpServletRequest1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "buildDetails"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+              uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "context"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<unknown_object>
+                  target: "javax.servlet.http.HttpServletRequest"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "javax.servlet.http.HttpServletRequest"
+                uuid: "doFilterInternal_httpServletRequest1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "buildDetails"
+          valueType: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+          uuid: "doFilterInternal_webAuthenticationDetails1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "SecurityContextHolder"
+      modelFingerprint: "44821213A6B2DB81E932821C9283C1CD"
+      index: 12
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.security.core.context.SecurityContextHolder"
+        uuid: "org.springframework.security.core.context.SecurityContextHolder"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContextHolder"
+        name: "getContext"
+        parameters: []
+        signature: "getContext(): SecurityContext"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.springframework.security.core.context.SecurityContext"
+          uuid: "doFilterInternal_securityContext2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "23214D08FFD83155D2CA0D127061F127"
+      index: 13
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.security.core.context.SecurityContext"
+        uuid: "doFilterInternal_securityContext2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.security.core.context.SecurityContext"
+        name: "setAuthentication"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.springframework.security.authentication.UsernamePasswordAuthenticationToken"
+              parameters:
+              - name: "principal"
+                value:
+                  sapientType: "MOCK"
+                  suggestedContent: !<unknown_object>
+                    target: "org.springframework.security.core.userdetails.UserDetails"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.springframework.security.core.userdetails.UserDetails"
+                  uuid: "doFilterInternal_userDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "credentials"
+                value:
+                  sapientType: "NULL"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "authorities"
+                value:
+                  sapientType: "COLLECTION"
+                  content: !<collection>
+                    parameters: []
+                    values: []
+                  suggestedContent: !<collection>
+                    parameters: []
+                    values: []
+                  valueType: "java.util.Collection"
+                  genericValueType: "? extends org.springframework.security.core.GrantedAuthority"
+                  uuid: "doFilterInternal_collection1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: true
+              propertiesMap:
+                details:
+                  sapientType: "OBJECT"
+                  content: !<method_return_from_value>
+                    target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      content: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      suggestedContent: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                      uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "context"
+                      value:
+                        sapientType: "NULL"
+                        suggestedContent: !<unknown_object>
+                          target: "javax.servlet.http.HttpServletRequest"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "javax.servlet.http.HttpServletRequest"
+                        uuid: "doFilterInternal_httpServletRequest1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "buildDetails"
+                  suggestedContent: !<method_return_from_value>
+                    target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      suggestedContent: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                      uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "context"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<unknown_object>
+                          target: "javax.servlet.http.HttpServletRequest"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "javax.servlet.http.HttpServletRequest"
+                        uuid: "doFilterInternal_httpServletRequest1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "buildDetails"
+                  valueType: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                  uuid: "doFilterInternal_webAuthenticationDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<new>
+              target: "org.springframework.security.authentication.UsernamePasswordAuthenticationToken"
+              parameters:
+              - name: "principal"
+                value:
+                  sapientType: "UNKNOWN"
+                  suggestedContent: !<unknown_object>
+                    target: "org.springframework.security.core.userdetails.UserDetails"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "org.springframework.security.core.userdetails.UserDetails"
+                  uuid: "doFilterInternal_userDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "credentials"
+                value:
+                  sapientType: "NULL"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "authorities"
+                value:
+                  sapientType: "COLLECTION"
+                  valueType: "java.util.Collection"
+                  genericValueType: "? extends org.springframework.security.core.GrantedAuthority"
+                  uuid: "doFilterInternal_collection1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: true
+              propertiesMap:
+                details:
+                  sapientType: "OBJECT"
+                  suggestedContent: !<method_return_from_value>
+                    target: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      suggestedContent: !<new>
+                        target: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                        parameters: []
+                        privateConstructor: false
+                        createdByTargetCode: true
+                      valueType: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+                      uuid: "doFilterInternal_webAuthenticationDetailsSource1"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "context"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<unknown_object>
+                          target: "javax.servlet.http.HttpServletRequest"
+                          onlyPojoFunctions: false
+                          builderPattern: false
+                        valueType: "javax.servlet.http.HttpServletRequest"
+                        uuid: "doFilterInternal_httpServletRequest1"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "buildDetails"
+                  valueType: "org.springframework.security.web.authentication.WebAuthenticationDetails"
+                  uuid: "doFilterInternal_webAuthenticationDetails1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "org.springframework.security.authentication.UsernamePasswordAuthenticationToken"
+            uuid: "doFilterInternal_usernamePasswordAuthenticationToken1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setAuthentication(UsernamePasswordAuthenticationToken): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "doFilterInternal_void3"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "filterChain"
+      modelFingerprint: "38AFF5EAE16468D7ADD038B4EEC54863"
+      index: 14
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        suggestedContent: !<unknown_object>
+          target: "javax.servlet.FilterChain"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "javax.servlet.FilterChain"
+        uuid: "doFilterInternal_filterChain1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "filterChain"
+        name: "doFilter"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "javax.servlet.http.HttpServletRequest"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "javax.servlet.http.HttpServletRequest"
+            uuid: "doFilterInternal_httpServletRequest1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "arg1"
+          value:
+            sapientType: "NULL"
+            suggestedContent: !<unknown_object>
+              target: "javax.servlet.http.HttpServletResponse"
+              onlyPojoFunctions: false
+              builderPattern: false
+            valueType: "javax.servlet.http.HttpServletResponse"
+            uuid: "doFilterInternal_httpServletResponse1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.io.IOException"
+        - "javax.servlet.ServletException"
+        signature: "doFilter(HttpServletRequest,HttpServletResponse): void throws\
+          \ java.io.IOException,javax.servlet.ServletException"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "doFilterInternal_void4"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 15
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "feb7e1d0-ef0f-3bd7-939f-6dcd16f2d80f"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "org.springframework.security.web.authentication.WebAuthenticationDetailsSource"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path14"
+    pathIdForUser: "path16"
+    testPathName: "doFilterInternalWhenSecurityContextHolderGetContextGetAuthenticationIsNullAndJwtUtilNotValidateTokenJwtTokenUserDetails2"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D55E9B53BBB776A3ADA5AEA0714B8FF3"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 4
+      catchExceptions:
+      - "java.lang.Exception"
+    truncated: true
+    inputParameters: []
+    uuid: "b826e41f-24dc-3c7b-89e2-7a03bc708aaf"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    usedLLM: false
+    disabledStatusUpdatedByUser: false

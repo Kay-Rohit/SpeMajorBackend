@@ -13,7 +13,10 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 @Service
 public class CustomerService {
 
@@ -24,6 +27,7 @@ public class CustomerService {
     private final ReviewRepository reviewRepository;
     
     private final AuthMasterRepository authMasterRepository;
+    private static final Logger logger = LogManager.getLogger(CustomerService.class);
 
     public CustomerService(MessRepository messRepository, MenuRepository menuRepository, CustomerRepository customerRepository, JoiningRequestRepository requestRepository, ReviewRepository reviewRepository, AuthMasterRepository authMasterRepository) {
         this.messRepository = messRepository;
@@ -62,7 +66,8 @@ public class CustomerService {
             return true;
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+//            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
         }
         return false;
     }
@@ -97,7 +102,8 @@ public class CustomerService {
             return true;
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+//            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
         }
         return false;
     }
@@ -106,14 +112,16 @@ public class CustomerService {
         Customer customer = customerRepository.findById(customerId).orElseThrow(
                 () -> new UsernameNotFoundException("No customer found with username:"+customerId)
         );
-        System.out.println("customer fetched with username "+customer.getUsername());
+//        System.out.println("customer fetched with username "+customer.getUsername());
+        logger.info("customer fetched with username "+customer.getUsername());
 
         //check if there is mess assigned to a customer or not
 //        System.out.println(customer.getMess());
+        logger.info(customer.getMess());
         if(customer.getMess() != null){
             Mess assignedMess = messRepository.findById(customer.getMess().getUsername()).get();
-            System.out.println("mess fetched"+ assignedMess.getMessname());
-
+//            System.out.println("mess fetched"+ assignedMess.getMessname());
+            logger.info("mess fetched"+ assignedMess.getMessname());
             List<Menu> menus = menuRepository.findByMess_Username(customer.getMess().getUsername());
 
             CustomerProfileResponse response =
@@ -134,7 +142,7 @@ public class CustomerService {
             return response;
         }
         else{
-            System.out.println("Inside else");
+//            System.out.println("Inside else");
             CustomerProfileResponse response =
                     new CustomerProfileResponse(
                             customer.getUsername(),

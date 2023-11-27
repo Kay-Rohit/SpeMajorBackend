@@ -1,0 +1,1037 @@
+---
+modelFingerprint: "5F0563BFE074B06EB6484E1636691216"
+methods:
+- method:
+    name: "calculateAmount"
+    returnType: "float"
+    signature: "calculateAmount(java.lang.String,java.util.Date,java.util.Date,java.lang.String)\
+      \ : float"
+    instructionFingerprint: "C91A1842F9E42C8F1EA0B68198E667AA"
+    parametersTypes:
+    - "java.lang.String"
+    - "java.util.Date"
+    - "java.util.Date"
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "calculateAmountWhenStartDateAfterEndDateThrowsIllegalArgumentException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.repository.MessRepository,com.org.spemajorbackend.repository.CustomerRepository)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "7975C6F76004F98B3A941066B836445F"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "D1D1A265D346A23C7B1F223302EF6839"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.service.CalculatorService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.service.CalculatorService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.service.CalculatorService"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "messId"
+      modelFingerprint: "6708CFC9DFFC8DFAB80EC272AB53561B"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "messId1"
+        valueType: "java.lang.String"
+        uuid: "calculateAmount_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "startDate"
+      modelFingerprint: "B963960EA0BB692EB2FDD5BDD7545861"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.util.Date"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.util.Date"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.util.Date"
+        uuid: "calculateAmount_date1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "endDate"
+      modelFingerprint: "AF0F80A1EF3BFD5875EC4B062A3D2719"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.util.Date"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.util.Date"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.util.Date"
+        uuid: "calculateAmount_date2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "customerID"
+      modelFingerprint: "BFB8E47D00A829653BA8DD3375D2DFEE"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "customerID1"
+        valueType: "java.lang.String"
+        uuid: "calculateAmount_string2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "F910C3FC32838BCE522261A0862BB0F2"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.IllegalArgumentException"
+          parameters:
+          - name: "s"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Start date cannot be after end date"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "java.lang.IllegalArgumentException"
+          parameters:
+          - name: "s"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Start date cannot be after end date"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "java.lang.IllegalArgumentException"
+        uuid: "calculateAmount_illegalArgumentException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "a482aaab-42ae-3d75-8332-7a07f1805eda"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "calculateAmountWhenStartDateNotAfterEndDateThrowsUsernameNotFoundException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.repository.MessRepository,com.org.spemajorbackend.repository.CustomerRepository)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "1C43A7CD3FE05C0E857FEE1B34C990BA"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "128A3FE67AA69ACE81AF9C05C24FFEB3"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.service.CalculatorService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.MessRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.service.CalculatorService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.MessRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.service.CalculatorService"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "messId"
+      modelFingerprint: "8523FA3F09E1C0CA0FC67052591F14B1"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "calculateAmount_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "startDate"
+      modelFingerprint: "B963960EA0BB692EB2FDD5BDD7545861"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.util.Date"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.util.Date"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.util.Date"
+        uuid: "calculateAmount_date1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "endDate"
+      modelFingerprint: "AF0F80A1EF3BFD5875EC4B062A3D2719"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.util.Date"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.util.Date"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.util.Date"
+        uuid: "calculateAmount_date2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "customerID"
+      modelFingerprint: "BFB8E47D00A829653BA8DD3375D2DFEE"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "customerID1"
+        valueType: "java.lang.String"
+        uuid: "calculateAmount_string2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messRepository"
+      modelFingerprint: "35508DFDB71342BE66AA036149F7E575"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.repository.MessRepository"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.repository.MessRepository"
+        uuid: "<init>_messRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messRepository"
+        name: "findById"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "calculateAmount_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findById(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          uuid: "calculateAmount_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EC21BD2BC25E1B158FA3DDA6DCB00D53"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+          parameters:
+          - name: "msg"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "No mess exist owned by: A"
+              suggestedContent: !<regular>
+                value: "No mess exist owned by: A"
+              valueType: "java.lang.String"
+              uuid: "lambda$calculateAmount$0_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+          parameters:
+          - name: "msg"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "No mess exist owned by: A"
+              valueType: "java.lang.String"
+              uuid: "lambda$calculateAmount$0_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+        uuid: "lambda$calculateAmount$0_usernameNotFoundException1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "da1d2968-3864-32b9-b60c-2d1f16754bf8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+- method:
+    name: "calculateTotal"
+    returnType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+    signature: "calculateTotal(java.lang.String) : com.org.spemajorbackend.dto.AmountBalancesResponse"
+    instructionFingerprint: "4D660CE667E6DFE27BEED8FAC7EF4A75"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "calculateTotalThrowsUsernameNotFoundException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.repository.MessRepository,com.org.spemajorbackend.repository.CustomerRepository)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "8DB7D3445E5044275C83EC0C13621A75"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "128A3FE67AA69ACE81AF9C05C24FFEB3"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.service.CalculatorService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.MessRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.service.CalculatorService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.MessRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.service.CalculatorService"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "ownerId"
+      modelFingerprint: "47787622E2BB11A0A9521AF997761EAF"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "calculateTotal_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messRepository"
+      modelFingerprint: "35508DFDB71342BE66AA036149F7E575"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.repository.MessRepository"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.repository.MessRepository"
+        uuid: "<init>_messRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messRepository"
+        name: "findById"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "calculateTotal_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findById(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          uuid: "calculateTotal_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3362FDEE7D1FEDA34D4B307E44A43453"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+          parameters:
+          - name: "msg"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "No mess exist owned by:A"
+              suggestedContent: !<regular>
+                value: "No mess exist owned by:A"
+              valueType: "java.lang.String"
+              uuid: "lambda$calculateTotal$2_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+          parameters:
+          - name: "msg"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "No mess exist owned by:A"
+              valueType: "java.lang.String"
+              uuid: "lambda$calculateTotal$2_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+        uuid: "lambda$calculateTotal$2_usernameNotFoundException1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "29df8cff-4879-35e9-86cd-8a94542c8853"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+- method:
+    name: "calculateBMI"
+    returnType: "java.lang.Double"
+    signature: "calculateBMI(java.lang.Double,java.lang.Double) : java.lang.Double"
+    instructionFingerprint: "8C06E413723116338909B75A9889CD4A"
+    parametersTypes:
+    - "java.lang.Double"
+    - "java.lang.Double"
+  paths:
+  - pathId: "path3"
+    pathIdForUser: "path1"
+    testPathName: "calculateBMIWhenHeightLessThanOrEqualsTo0ThrowsIllegalArgumentException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.repository.MessRepository,com.org.spemajorbackend.repository.CustomerRepository)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "C39D4122ABC56306CDBE3B06308EC8FC"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "d446f50b-3868-378c-9af5-e0c5456c22d6"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path1"
+    pathIdForUser: "path2"
+    testPathName: "calculateBMIWhenWeightLessThanOrEqualsTo0ThrowsIllegalArgumentException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.repository.MessRepository,com.org.spemajorbackend.repository.CustomerRepository)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "CC3FF41CAC53E0EF9743A5690FCAF20C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "D1D1A265D346A23C7B1F223302EF6839"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.service.CalculatorService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.service.CalculatorService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.service.CalculatorService"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "height"
+      modelFingerprint: "81B954235B7941C073C807093E185AC8"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 1.0
+        suggestedContent: !<regular>
+          value: 1.0
+        valueType: "java.lang.Double"
+        uuid: "calculateBMI_double1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "weight"
+      modelFingerprint: "020D7905F1F562A8F15783598458CA79"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0.0
+        suggestedContent: !<regular>
+          value: 0.0
+        valueType: "java.lang.Double"
+        uuid: "calculateBMI_double2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "056639A0F9AD295E6B700743D32AAC05"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.IllegalArgumentException"
+          parameters:
+          - name: "s"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Only positive values are expected as weight and height"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "java.lang.IllegalArgumentException"
+          parameters:
+          - name: "s"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Only positive values are expected as weight and height"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "java.lang.IllegalArgumentException"
+        uuid: "calculateBMI_illegalArgumentException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "81d94e34-c061-399b-be9f-b2a9e3f60d80"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path2"
+    pathIdForUser: "path3"
+    testPathName: "calculateBMIWhenWeightGreaterThan0"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.repository.MessRepository,com.org.spemajorbackend.repository.CustomerRepository)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D95947070E464803E6C821327E72FDB9"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "D1D1A265D346A23C7B1F223302EF6839"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.service.CalculatorService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.service.CalculatorService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.service.CalculatorService"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "height"
+      modelFingerprint: "81B954235B7941C073C807093E185AC8"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 1.0
+        suggestedContent: !<regular>
+          value: 1.0
+        valueType: "java.lang.Double"
+        uuid: "calculateBMI_double1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "weight"
+      modelFingerprint: "E5611DB345386AAAD7790124524A1BA4"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 1.0
+        suggestedContent: !<regular>
+          value: 1.0
+        valueType: "java.lang.Double"
+        uuid: "calculateBMI_double2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "7A42B79EC2732BDFB0A1672465F1B939"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 1.0
+        suggestedContent: !<regular>
+          value: 1.0
+        valueType: "java.lang.Double"
+        uuid: "calculateBMI_double10"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "06f4ee48-6001-35c4-b084-18c8750dec29"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false

@@ -13,8 +13,11 @@ import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import lombok.extern.slf4j.Slf4j;
 @Service
+@Slf4j
 public class MessService {
 
     private final MessRepository messRepository;
@@ -23,6 +26,7 @@ public class MessService {
     private final JoiningRequestRepository requestRepository;
 
     private final ReviewRepository reviewRepository;
+    private static final Logger logger = LogManager.getLogger(MessService.class);
 
     public MessService(MessRepository messRepository, MenuRepository menuRepository, CustomerRepository customerRepository, JoiningRequestRepository requestRepository, ReviewRepository reviewRepository) {
         this.messRepository = messRepository;
@@ -49,7 +53,10 @@ public class MessService {
                             menuItem.getDinner()
                     );
                     menu.setMess(mess);
-                    menuRepository.save(menu);
+//                    if(menu.getMess().getMessname().equals(null))
+//                        throw new IllegalStateException("mess not set");
+//                    else
+                        menuRepository.save(menu);
                 }
                 //else update
                 else{
@@ -65,7 +72,8 @@ public class MessService {
             }
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+//            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
             return false;
         }
         return true;
@@ -94,7 +102,8 @@ public class MessService {
             return ResponseEntity.ok("Request Accepted Successfully");
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+//            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -110,6 +119,7 @@ public class MessService {
             List<Menu> menus = menuRepository.findByMess_Username(owner_id);
             List<Customer> customers = customerRepository.findByMess_Username(owner_id);
             List<Review> reviews = reviewRepository.findByMess_Username(owner_id);
+
 
             owner.setMenus(menus);
             owner.setCustomers(customers);
@@ -127,24 +137,40 @@ public class MessService {
         Mess owner = messRepository.findById(owner_id).orElseThrow(
                 () -> new UsernameNotFoundException("Sorry no mess found owned by:"+owner_id)
         );
+        Boolean flag = Boolean.FALSE;
         try{
-            owner.setPhone(mess.getPhone());
-            owner.setMessname(mess.getMessname());
-            owner.setAddress(mess.getAddress());
-            owner.setLatitude(mess.getLatitude());
-            owner.setLongitude(mess.getLongitude());
-            owner.setService(mess.getService());
-            owner.setType(mess.getType());
-            owner.setTrial(mess.isTrial());
-            owner.setBreakfast(mess.isBreakfast());
-            owner.setPricing(mess.getPricing());
-            messRepository.save(owner);
+//            owner.setPhone(mess.getPhone());
+//            owner.setMessname(mess.getMessname());
+//            owner.setAddress(mess.getAddress());
+//            owner.setLatitude(mess.getLatitude());
+//            owner.setLongitude(mess.getLongitude());
+//            owner.setService(mess.getService());
+//            owner.setType(mess.getType());
+//            owner.setTrial(mess.isTrial());
+//            owner.setBreakfast(mess.isBreakfast());
+//            owner.setPricing(mess.getPricing());
 
+            if(!owner.getPhone().equals(mess.getPhone())
+                || !owner.getMessname().equals(mess.getMessname())
+                    || !owner.getAddress().equals(mess.getAddress())
+                    || !owner.getLatitude().equals(mess.getLatitude())
+                    || !owner.getLongitude().equals(mess.getLongitude())
+                    || !owner.getService().equals(mess.getService())
+                    || !owner.getType().equals(mess.getType())
+                    || !owner.getPricing().equals(mess.getPricing())
+            )
+                flag = Boolean.TRUE;
+
+            if(flag)
+                throw new IllegalStateException("Cannot update due to deletion of statements");
+            messRepository.save(owner);
+            return ResponseEntity.ok(owner);
         }
         catch(Exception e){
             throw new RuntimeException("Employee is not found for the id"+owner_id);
         }
-        return ResponseEntity.ok(owner);
+
+//        return ResponseEntity.ok(owner);
     }
 
     public List<JoinRequestResponse> seeJoiningRequests(String ownerId) {
@@ -168,7 +194,8 @@ public class MessService {
             return ResponseEntity.ok("Request deleted");
         }
         catch (Exception e){
-            System.out.printf(e.getMessage());
+//            System.out.printf(e.getMessage());
+            logger.info(e.getMessage());
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }

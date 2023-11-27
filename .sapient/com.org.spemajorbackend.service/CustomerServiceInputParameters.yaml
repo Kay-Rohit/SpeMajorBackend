@@ -1,0 +1,1981 @@
+---
+modelFingerprint: "FE4D67C6A23B574DA8C93CDD3DCAC17C"
+methods:
+- method:
+    name: "getMessList"
+    returnType: "java.util.List"
+    signature: "getMessList() : java.util.List<com.org.spemajorbackend.entity.Mess>"
+    instructionFingerprint: "A8CB74172C59CCCDCECDBA52412532DA"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getMessListWhenMessesIsNotEmpty"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.repository.MessRepository,com.org.spemajorbackend.repository.MenuRepository,com.org.spemajorbackend.repository.CustomerRepository,com.org.spemajorbackend.repository.JoiningRequestRepository,com.org.spemajorbackend.repository.ReviewRepository,com.org.spemajorbackend.repository.AuthMasterRepository)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "68F8088A8244B4626AB0C437E4B8F4E7"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "0B9C1DC038387ADA63DD08E061C32AC9"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.service.CustomerService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.MessRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "menuRepository"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.MenuRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.MenuRepository"
+              uuid: "<init>_menuRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "requestRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.JoiningRequestRepository"
+              uuid: "<init>_joiningRequestRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reviewRepository"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.ReviewRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.ReviewRepository"
+              uuid: "<init>_reviewRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "authMasterRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.AuthMasterRepository"
+              uuid: "<init>_authMasterRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.service.CustomerService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.MessRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "menuRepository"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.MenuRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.MenuRepository"
+              uuid: "<init>_menuRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "requestRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.JoiningRequestRepository"
+              uuid: "<init>_joiningRequestRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reviewRepository"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.ReviewRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.ReviewRepository"
+              uuid: "<init>_reviewRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "authMasterRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.AuthMasterRepository"
+              uuid: "<init>_authMasterRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.service.CustomerService"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messRepository"
+      modelFingerprint: "F8B4B1208359B7B119149EF59469BAA0"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.repository.MessRepository"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.repository.MessRepository"
+        uuid: "<init>_messRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messRepository"
+        name: "findAll"
+        parameters: []
+        signature: "findAll(): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "NULL"
+              valueType: "com.org.spemajorbackend.entity.Mess"
+              uuid: "getMessList_1"
+              fixed: false
+              collectionUuid: "getMessList_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          suggestedContent: !<collection>
+            collectionClass: "java.util.ArrayList"
+            parameters: []
+            values:
+            - sapientType: "NULL"
+              valueType: "com.org.spemajorbackend.entity.Mess"
+              uuid: "getMessList_1"
+              fixed: false
+              collectionUuid: "getMessList_list1"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          valueType: "java.util.List"
+          uuid: "getMessList_list1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "mess"
+      modelFingerprint: "49A6F1F1A145CE2DDBB61C57075D4385"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "com.org.spemajorbackend.entity.Mess"
+        uuid: "getMessList_1"
+        fixed: false
+        collectionUuid: "getMessList_arrayList1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "mess"
+        name: "getUsername"
+        parameters: []
+        signature: "getUsername(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getUsername1"
+          valueType: "java.lang.String"
+          uuid: "getMessList_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "menuRepository"
+      modelFingerprint: "162C954ED314259CEB981AAC87A5290A"
+      index: 4
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.repository.MenuRepository"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.repository.MenuRepository"
+        uuid: "<init>_menuRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.menuRepository"
+        name: "findByMess_Username"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getUsername1"
+            valueType: "java.lang.String"
+            uuid: "getMessList_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByMess_Username(String): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          suggestedContent: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.List"
+          genericValueType: "com.org.spemajorbackend.entity.Menu"
+          uuid: "getMessList_list2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "mess"
+      modelFingerprint: "F807057FF3951D6A1CB42C852145D948"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "com.org.spemajorbackend.entity.Mess"
+        uuid: "getMessList_1"
+        fixed: false
+        collectionUuid: "getMessList_arrayList1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "mess"
+        name: "setMenus"
+        parameters:
+        - name: "menus"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            suggestedContent: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "com.org.spemajorbackend.entity.Menu"
+            uuid: "getMessList_list2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setMenus(List): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "getMessList_void2"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "mess"
+      modelFingerprint: "49A6F1F1A145CE2DDBB61C57075D4385"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "com.org.spemajorbackend.entity.Mess"
+        uuid: "getMessList_1"
+        fixed: false
+        collectionUuid: "getMessList_arrayList1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "mess"
+        name: "getUsername"
+        parameters: []
+        signature: "getUsername(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getUsername1"
+          valueType: "java.lang.String"
+          uuid: "getMessList_string2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "reviewRepository"
+      modelFingerprint: "85E27B53C86069BE77281960650EA93D"
+      index: 7
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.repository.ReviewRepository"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.repository.ReviewRepository"
+        uuid: "<init>_reviewRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.reviewRepository"
+        name: "findByMess_Username"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getUsername1"
+            valueType: "java.lang.String"
+            uuid: "getMessList_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByMess_Username(String): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          suggestedContent: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.List"
+          genericValueType: "com.org.spemajorbackend.entity.Review"
+          uuid: "getMessList_list3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "mess"
+      modelFingerprint: "04F8FF916D89E6455AA80980A0902E4A"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "com.org.spemajorbackend.entity.Mess"
+        uuid: "getMessList_1"
+        fixed: false
+        collectionUuid: "getMessList_arrayList1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "mess"
+        name: "setReviews"
+        parameters:
+        - name: "reviews"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            suggestedContent: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "com.org.spemajorbackend.entity.Review"
+            uuid: "getMessList_list3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setReviews(List): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "getMessList_void3"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "mess"
+      modelFingerprint: "4BCD7AA0247B675E9D3EF61E22A8DDD7"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "com.org.spemajorbackend.entity.Mess"
+        uuid: "getMessList_1"
+        fixed: false
+        collectionUuid: "getMessList_arrayList1"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "mess"
+        name: "setCustomers"
+        parameters:
+        - name: "customers"
+          value:
+            sapientType: "NULL"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setCustomers(not-detected): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "getMessList_void4"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "BB3C8F051EBB5AE525E4445CD8D8D998"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          collectionClass: "java.util.ArrayList"
+          parameters: []
+          values:
+          - sapientType: "NULL"
+            valueType: "com.org.spemajorbackend.entity.Mess"
+            uuid: "getMessList_1"
+            fixed: false
+            collectionUuid: "getMessList_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        suggestedContent: !<collection>
+          collectionClass: "java.util.ArrayList"
+          parameters: []
+          values:
+          - sapientType: "NULL"
+            valueType: "com.org.spemajorbackend.entity.Mess"
+            uuid: "getMessList_1"
+            fixed: false
+            collectionUuid: "getMessList_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        valueType: "java.util.List"
+        genericValueType: "com.org.spemajorbackend.entity.Mess"
+        uuid: "getMessList_arrayList1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "67605ec6-2235-399b-9426-e8782babb569"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+- method:
+    name: "sendJoinRequest"
+    returnType: "boolean"
+    signature: "sendJoinRequest(java.lang.String,java.lang.String) : boolean"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.lang.Exception"
+    instructionFingerprint: "FC06A1B0A2DB11EF1D2232CBA6449664"
+    parametersTypes:
+    - "java.lang.String"
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "sendJoinRequestTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.repository.MessRepository,com.org.spemajorbackend.repository.MenuRepository,com.org.spemajorbackend.repository.CustomerRepository,com.org.spemajorbackend.repository.JoiningRequestRepository,com.org.spemajorbackend.repository.ReviewRepository,com.org.spemajorbackend.repository.AuthMasterRepository)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "49E8D7C3576DE1C76B1AC983CE8E1692"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "32FC9AE10D451AAD4B032E872E5D9C97"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.service.CustomerService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.MessRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "menuRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.MenuRepository"
+              uuid: "<init>_menuRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.CustomerRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "requestRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.JoiningRequestRepository"
+              uuid: "<init>_joiningRequestRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reviewRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.ReviewRepository"
+              uuid: "<init>_reviewRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "authMasterRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.AuthMasterRepository"
+              uuid: "<init>_authMasterRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.service.CustomerService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.MessRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "menuRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.MenuRepository"
+              uuid: "<init>_menuRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.CustomerRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "requestRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.JoiningRequestRepository"
+              uuid: "<init>_joiningRequestRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reviewRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.ReviewRepository"
+              uuid: "<init>_reviewRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "authMasterRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.AuthMasterRepository"
+              uuid: "<init>_authMasterRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.service.CustomerService"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "customerId"
+      modelFingerprint: "774BD350100A24BB53C82F3728373F2B"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "customerId1"
+        valueType: "java.lang.String"
+        uuid: "sendJoinRequest_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "ownerId"
+      modelFingerprint: "47787622E2BB11A0A9521AF997761EAF"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "sendJoinRequest_string2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "customerRepository"
+      modelFingerprint: "FF413F9B9BE58EBD6476282BB1F9A1E7"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.repository.CustomerRepository"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+        uuid: "<init>_customerRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.customerRepository"
+        name: "findById"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "customerId1"
+            valueType: "java.lang.String"
+            uuid: "sendJoinRequest_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findById(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.entity.Customer"
+              uuid: "sendJoinRequest_object1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: true
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          uuid: "sendJoinRequest_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messRepository"
+      modelFingerprint: "35508DFDB71342BE66AA036149F7E575"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.repository.MessRepository"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.repository.MessRepository"
+        uuid: "<init>_messRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messRepository"
+        name: "findById"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "sendJoinRequest_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findById(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          uuid: "sendJoinRequest_optional2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: false
+        valueType: "boolean"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "bddea0be-096c-3b65-b962-ef42d24f5da2"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+- method:
+    name: "addReview"
+    returnType: "boolean"
+    signature: "addReview(com.org.spemajorbackend.dro.AddReviewRequest) : boolean"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.Exception"
+    instructionFingerprint: "A0C2B5191F1A304242599581483BD930"
+    parametersTypes:
+    - "com.org.spemajorbackend.dro.AddReviewRequest"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "addReviewThrowsUsernameNotFoundException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.repository.MessRepository,com.org.spemajorbackend.repository.MenuRepository,com.org.spemajorbackend.repository.CustomerRepository,com.org.spemajorbackend.repository.JoiningRequestRepository,com.org.spemajorbackend.repository.ReviewRepository,com.org.spemajorbackend.repository.AuthMasterRepository)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "7CF0A9558EC3952DCF25C7B15B355D52"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E436944020E4834E5B7F8D72C1783EEE"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.service.CustomerService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.MessRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "menuRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.MenuRepository"
+              uuid: "<init>_menuRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "requestRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.JoiningRequestRepository"
+              uuid: "<init>_joiningRequestRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reviewRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.ReviewRepository"
+              uuid: "<init>_reviewRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "authMasterRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.AuthMasterRepository"
+              uuid: "<init>_authMasterRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.service.CustomerService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.MessRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "menuRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.MenuRepository"
+              uuid: "<init>_menuRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "requestRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.JoiningRequestRepository"
+              uuid: "<init>_joiningRequestRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reviewRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.ReviewRepository"
+              uuid: "<init>_reviewRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "authMasterRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.AuthMasterRepository"
+              uuid: "<init>_authMasterRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.service.CustomerService"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "review"
+      modelFingerprint: "599EF5700CCFFF9ADCFD9D9CDA228C8E"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.dro.AddReviewRequest"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            mess_owner_username:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "A"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "addReview_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.dro.AddReviewRequest"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            mess_owner_username:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "addReview_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.org.spemajorbackend.dro.AddReviewRequest"
+        uuid: "addReview_addReviewRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "review"
+      modelFingerprint: "630B99CBE6326F8E3755765F849AEC19"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.dro.AddReviewRequest"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            mess_owner_username:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "A"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "addReview_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.dro.AddReviewRequest"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            mess_owner_username:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "addReview_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.org.spemajorbackend.dro.AddReviewRequest"
+        uuid: "addReview_addReviewRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "review"
+        name: "getMess_owner_username"
+        parameters: []
+        signature: "getMess_owner_username(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "A"
+          suggestedContent: !<regular>
+            value: "A"
+          valueType: "java.lang.String"
+          uuid: "addReview_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messRepository"
+      modelFingerprint: "35508DFDB71342BE66AA036149F7E575"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.repository.MessRepository"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.repository.MessRepository"
+        uuid: "<init>_messRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messRepository"
+        name: "findById"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "addReview_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findById(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          uuid: "addReview_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "review"
+      modelFingerprint: "630B99CBE6326F8E3755765F849AEC19"
+      index: 5
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.dro.AddReviewRequest"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            mess_owner_username:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "A"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "addReview_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.dro.AddReviewRequest"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            mess_owner_username:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "addReview_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.org.spemajorbackend.dro.AddReviewRequest"
+        uuid: "addReview_addReviewRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "review"
+        name: "getMess_owner_username"
+        parameters: []
+        signature: "getMess_owner_username(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "A"
+          suggestedContent: !<regular>
+            value: "A"
+          valueType: "java.lang.String"
+          uuid: "addReview_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "14CC5EC1B9BC9B7EF5D45DA772B92014"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+          parameters:
+          - name: "msg"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "No mess found with owner:A"
+              suggestedContent: !<regular>
+                value: "No mess found with owner:A"
+              valueType: "java.lang.String"
+              uuid: "lambda$addReview$2_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+          parameters:
+          - name: "msg"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "No mess found with owner:A"
+              valueType: "java.lang.String"
+              uuid: "lambda$addReview$2_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+        uuid: "lambda$addReview$2_usernameNotFoundException1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "a3685367-0275-3556-8a69-32890ab7fffc"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+- method:
+    name: "getProfile"
+    returnType: "com.org.spemajorbackend.dto.CustomerProfileResponse"
+    signature: "getProfile(java.lang.String) : com.org.spemajorbackend.dto.CustomerProfileResponse"
+    instructionFingerprint: "98BFEC227484C7388DF25C7A0F7A2087"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getProfileThrowsUsernameNotFoundException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.repository.MessRepository,com.org.spemajorbackend.repository.MenuRepository,com.org.spemajorbackend.repository.CustomerRepository,com.org.spemajorbackend.repository.JoiningRequestRepository,com.org.spemajorbackend.repository.ReviewRepository,com.org.spemajorbackend.repository.AuthMasterRepository)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "7EE9FD3E6B7436B7198E59620ED296A9"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "7D22E88129F91EB55F26DECD8EAF0FA1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.service.CustomerService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "menuRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.MenuRepository"
+              uuid: "<init>_menuRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.CustomerRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "requestRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.JoiningRequestRepository"
+              uuid: "<init>_joiningRequestRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reviewRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.ReviewRepository"
+              uuid: "<init>_reviewRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "authMasterRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.AuthMasterRepository"
+              uuid: "<init>_authMasterRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.service.CustomerService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "menuRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.MenuRepository"
+              uuid: "<init>_menuRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.CustomerRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "requestRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.JoiningRequestRepository"
+              uuid: "<init>_joiningRequestRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reviewRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.ReviewRepository"
+              uuid: "<init>_reviewRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "authMasterRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.AuthMasterRepository"
+              uuid: "<init>_authMasterRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.service.CustomerService"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "customerId"
+      modelFingerprint: "C598E54C3D2D40B0A7DDB0A63116EEF7"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "getProfile_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "customerRepository"
+      modelFingerprint: "13D733B9E9F7F4E64948E667A5644AFD"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.repository.CustomerRepository"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+        uuid: "<init>_customerRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.customerRepository"
+        name: "findById"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "getProfile_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findById(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          uuid: "getProfile_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "76FCC9CED8F9FBB529810D0088F05097"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+          parameters:
+          - name: "msg"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "No customer found with username:A"
+              suggestedContent: !<regular>
+                value: "No customer found with username:A"
+              valueType: "java.lang.String"
+              uuid: "lambda$getProfile$3_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+          parameters:
+          - name: "msg"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "No customer found with username:A"
+              valueType: "java.lang.String"
+              uuid: "lambda$getProfile$3_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+        uuid: "lambda$getProfile$3_usernameNotFoundException1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "ed4710d2-2242-3ca4-ab56-81d0ad6653cb"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+- method:
+    name: "resetPassword"
+    returnType: "boolean"
+    signature: "resetPassword(com.org.spemajorbackend.dro.ForgetPasswordRequest) :\
+      \ boolean"
+    instructionFingerprint: "8913B7CB503FA80B9AB53CA7C69BB804"
+    parametersTypes:
+    - "com.org.spemajorbackend.dro.ForgetPasswordRequest"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "resetPasswordThrowsUsernameNotFoundException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.repository.MessRepository,com.org.spemajorbackend.repository.MenuRepository,com.org.spemajorbackend.repository.CustomerRepository,com.org.spemajorbackend.repository.JoiningRequestRepository,com.org.spemajorbackend.repository.ReviewRepository,com.org.spemajorbackend.repository.AuthMasterRepository)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "00E8C2B0D2B4A507093C694D7E2FE9D5"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "A481E6A05229E6BF3467A40F2D394418"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.service.CustomerService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "menuRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.MenuRepository"
+              uuid: "<init>_menuRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "requestRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.JoiningRequestRepository"
+              uuid: "<init>_joiningRequestRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reviewRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.repository.ReviewRepository"
+              uuid: "<init>_reviewRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "authMasterRepository"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.AuthMasterRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.AuthMasterRepository"
+              uuid: "<init>_authMasterRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.service.CustomerService"
+          parameters:
+          - name: "messRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.MessRepository"
+              uuid: "<init>_messRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "menuRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.MenuRepository"
+              uuid: "<init>_menuRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "customerRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.CustomerRepository"
+              uuid: "<init>_customerRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "requestRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.JoiningRequestRepository"
+              uuid: "<init>_joiningRequestRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reviewRepository"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.repository.ReviewRepository"
+              uuid: "<init>_reviewRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "authMasterRepository"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.repository.AuthMasterRepository"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.repository.AuthMasterRepository"
+              uuid: "<init>_authMasterRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.service.CustomerService"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "forgetPasswordRequest"
+      modelFingerprint: "AE2A40E81EDDCAB12228E23FBB5B67BA"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.dro.ForgetPasswordRequest"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            username:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "A"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "resetPassword_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.dro.ForgetPasswordRequest"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            username:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "resetPassword_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.org.spemajorbackend.dro.ForgetPasswordRequest"
+        uuid: "resetPassword_forgetPasswordRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "forgetPasswordRequest"
+      modelFingerprint: "3C4C5DB6FA97CD3F51375EE9A22244D1"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.dro.ForgetPasswordRequest"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            username:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "A"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "resetPassword_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.dro.ForgetPasswordRequest"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+          propertiesMap:
+            username:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "resetPassword_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.org.spemajorbackend.dro.ForgetPasswordRequest"
+        uuid: "resetPassword_forgetPasswordRequest1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "forgetPasswordRequest"
+        name: "getUsername"
+        parameters: []
+        signature: "getUsername(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "A"
+          suggestedContent: !<regular>
+            value: "A"
+          valueType: "java.lang.String"
+          uuid: "resetPassword_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "authMasterRepository"
+      modelFingerprint: "DE11CC0D680025FF4061692D4E1A28E3"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.repository.AuthMasterRepository"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.repository.AuthMasterRepository"
+        uuid: "<init>_authMasterRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.authMasterRepository"
+        name: "findById"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "resetPassword_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findById(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          uuid: "resetPassword_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "76FCC9CED8F9FBB529810D0088F05097"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+          parameters:
+          - name: "msg"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "No customer found with username:A"
+              suggestedContent: !<regular>
+                value: "No customer found with username:A"
+              valueType: "java.lang.String"
+              uuid: "lambda$resetPassword$4_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+          parameters:
+          - name: "msg"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "No customer found with username:A"
+              valueType: "java.lang.String"
+              uuid: "lambda$resetPassword$4_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.springframework.security.core.userdetails.UsernameNotFoundException"
+        uuid: "lambda$resetPassword$4_usernameNotFoundException1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "27b439b2-8e1e-3ccd-bbd6-76c0e86da662"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false

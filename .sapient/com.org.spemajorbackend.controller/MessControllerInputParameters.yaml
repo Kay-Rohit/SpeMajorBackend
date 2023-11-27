@@ -1,0 +1,4052 @@
+---
+modelFingerprint: "15875E09FAE9E9C3FC5A4A49BAA72DE1"
+methods:
+- method:
+    name: "addMenu"
+    returnType: "org.springframework.http.ResponseEntity"
+    signature: "addMenu(java.util.List<com.org.spemajorbackend.dro.AddMenuRequest>,java.lang.String)\
+      \ : org.springframework.http.ResponseEntity<?>"
+    instructionFingerprint: "25B80B02A1E88A45EC88B4E4FCDAC0A3"
+    parametersTypes:
+    - "java.util.List"
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "addMenuWhenAdded"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "C68D1EFA481AE3389124E6BA70720BFE"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8E05F0271EDC0A7FD36E8A762A4F1AC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.controller.MessController"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "menuItems"
+      modelFingerprint: "2CF4FAC511C2342E407BB45B2ED6B941"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          parameters: []
+          values: []
+        suggestedContent: !<collection>
+          parameters: []
+          values: []
+        valueType: "java.util.List"
+        genericValueType: "com.org.spemajorbackend.dro.AddMenuRequest"
+        uuid: "addMenu_list1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "mess_owner_username"
+      modelFingerprint: "5EA67B5CF86ADDD086935A98392F91DE"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "addMenu_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messService"
+      modelFingerprint: "62EF764C267C56D01E5799A855DC254B"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.MessService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.MessService"
+        uuid: "<init>_messService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messService"
+        name: "addMenuItems"
+        parameters:
+        - name: "menuItems"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            suggestedContent: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "com.org.spemajorbackend.dro.AddMenuRequest"
+            uuid: "addMenu_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "mess_owner_username"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "addMenu_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "addMenuItems(List,String): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "addMenu_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ResponseEntity"
+      modelFingerprint: "6C65D2D8BFC897D378C23CCD8D362553"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.springframework.http.ResponseEntity"
+        uuid: "org.springframework.http.ResponseEntity"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity"
+        name: "ok"
+        parameters:
+        - name: "body"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Added Successfully"
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "ok(String): ResponseEntity"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "ok"
+            methodParameters:
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "Added Successfully"
+                valueType: "java.lang.String"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "ok"
+            methodParameters:
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "Added Successfully"
+                valueType: "java.lang.String"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "java.lang.String"
+          uuid: "addMenu_responseEntity1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "813A1F1BD1C169341359179098AE71B4"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "ok"
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Added Successfully"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "ok"
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Added Successfully"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.springframework.http.ResponseEntity"
+        genericValueType: "java.lang.String"
+        uuid: "addMenu_responseEntity1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "97a907a6-2e3c-3e04-9992-1f8b0f78b631"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "addMenuWhenNotAdded"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "86734F6D11F4CB88536CDCF091FF53C5"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8E05F0271EDC0A7FD36E8A762A4F1AC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.controller.MessController"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "menuItems"
+      modelFingerprint: "2CF4FAC511C2342E407BB45B2ED6B941"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          parameters: []
+          values: []
+        suggestedContent: !<collection>
+          parameters: []
+          values: []
+        valueType: "java.util.List"
+        genericValueType: "com.org.spemajorbackend.dro.AddMenuRequest"
+        uuid: "addMenu_list1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "mess_owner_username"
+      modelFingerprint: "5EA67B5CF86ADDD086935A98392F91DE"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "addMenu_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messService"
+      modelFingerprint: "DDE10449D31312767AF411A7547F1EE2"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.MessService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.MessService"
+        uuid: "<init>_messService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messService"
+        name: "addMenuItems"
+        parameters:
+        - name: "menuItems"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            suggestedContent: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "com.org.spemajorbackend.dro.AddMenuRequest"
+            uuid: "addMenu_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "mess_owner_username"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "addMenu_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "addMenuItems(List,String): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "addMenu_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ResponseEntity"
+      modelFingerprint: "3FDC318F4BF70ED0C5CD52243B4B057D"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.http.ResponseEntity"
+        uuid: "org.springframework.http.ResponseEntity"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity"
+        name: "unprocessableEntity"
+        parameters: []
+        signature: "unprocessableEntity(): ResponseEntity$BodyBuilder"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+          uuid: "addMenu_responseEntity.BodyBuilder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "E24E3EF603E5DAA6635977D777246178"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+        uuid: "addMenu_responseEntity.BodyBuilder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity$BodyBuilder"
+        name: "build"
+        parameters: []
+        signature: "build(): ResponseEntity"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "?"
+          uuid: "addMenu_responseEntity1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8AD7B3673F6E0C79B5A4626E461FBDA0"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.http.ResponseEntity"
+        genericValueType: "?"
+        uuid: "addMenu_responseEntity1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "d5ea09be-f5c2-331d-ba73-23d6feca7824"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+- method:
+    name: "acceptRequest"
+    returnType: "org.springframework.http.ResponseEntity"
+    signature: "acceptRequest(java.lang.String,java.lang.String) : org.springframework.http.ResponseEntity<?>"
+    instructionFingerprint: "77D730AA25A5F13EB5C528E2E29930DD"
+    parametersTypes:
+    - "java.lang.String"
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "acceptRequestTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "AF78E39F11CB097FD8790E5DB9B31FAD"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8E05F0271EDC0A7FD36E8A762A4F1AC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.controller.MessController"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "owner_id"
+      modelFingerprint: "B811B33EB8E63314D5C3E2A23E509460"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "owner_id1"
+        valueType: "java.lang.String"
+        uuid: "acceptRequest_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "customer_id"
+      modelFingerprint: "F3C52D12EE9E6130E1DB72BF0668F3D2"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "acceptRequest_string2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messService"
+      modelFingerprint: "D0475B6ADD60FB902768B4C813E03870"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.MessService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.MessService"
+        uuid: "<init>_messService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messService"
+        name: "acceptRequest"
+        parameters:
+        - name: "ownerId"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "owner_id1"
+            valueType: "java.lang.String"
+            uuid: "acceptRequest_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "customerId"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "acceptRequest_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "acceptRequest(String,String): ResponseEntity"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "?"
+          uuid: "acceptRequest_responseEntity1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8AD7B3673F6E0C79B5A4626E461FBDA0"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.http.ResponseEntity"
+        genericValueType: "?"
+        uuid: "acceptRequest_responseEntity1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "5304d5b0-6c50-373e-a4a6-83309c09369d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+- method:
+    name: "rejectRequest"
+    returnType: "org.springframework.http.ResponseEntity"
+    signature: "rejectRequest(java.lang.String,java.lang.String) : org.springframework.http.ResponseEntity<?>"
+    instructionFingerprint: "2D53658DB6C1434F25DBA75B74FD9B73"
+    parametersTypes:
+    - "java.lang.String"
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "rejectRequestTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "E796A4A182580E7E1B1558D7B1F772A6"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8E05F0271EDC0A7FD36E8A762A4F1AC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.controller.MessController"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "owner_id"
+      modelFingerprint: "B811B33EB8E63314D5C3E2A23E509460"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "owner_id1"
+        valueType: "java.lang.String"
+        uuid: "rejectRequest_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "customer_id"
+      modelFingerprint: "F3C52D12EE9E6130E1DB72BF0668F3D2"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "rejectRequest_string2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messService"
+      modelFingerprint: "F8955875FBFC8C76FCC80B1C80AF842C"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.MessService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.MessService"
+        uuid: "<init>_messService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messService"
+        name: "rejectRequest"
+        parameters:
+        - name: "ownerId"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "owner_id1"
+            valueType: "java.lang.String"
+            uuid: "rejectRequest_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "customerId"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "rejectRequest_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "rejectRequest(String,String): ResponseEntity"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "?"
+          uuid: "rejectRequest_responseEntity1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8AD7B3673F6E0C79B5A4626E461FBDA0"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.http.ResponseEntity"
+        genericValueType: "?"
+        uuid: "rejectRequest_responseEntity1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "d2893a4b-25a8-3177-902f-45fba97ebc69"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+- method:
+    name: "sendOwnerDetails"
+    returnType: "org.springframework.http.ResponseEntity"
+    signature: "sendOwnerDetails(java.lang.String) : org.springframework.http.ResponseEntity<?>"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.lang.Exception"
+    - idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.Exception"
+    instructionFingerprint: "4B1274E39BDF21C31DC28389567DC05F"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "sendOwnerDetailsWhenDetailsEqualsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "F5A2095A53D8069CC57B633A13CFCB3D"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8E05F0271EDC0A7FD36E8A762A4F1AC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.controller.MessController"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "owner_id"
+      modelFingerprint: "B811B33EB8E63314D5C3E2A23E509460"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "owner_id1"
+        valueType: "java.lang.String"
+        uuid: "sendOwnerDetails_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messService"
+      modelFingerprint: "72835041E358A69335979173E0074D56"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.MessService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.MessService"
+        uuid: "<init>_messService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messService"
+        name: "getOwnerDetails"
+        parameters:
+        - name: "owner_id"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "owner_id1"
+            valueType: "java.lang.String"
+            uuid: "sendOwnerDetails_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getOwnerDetails(String): ResponseEntity"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.springframework.http.ResponseEntity"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "?"
+          uuid: "sendOwnerDetails_responseEntity1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ResponseEntity"
+      modelFingerprint: "BC6B3E4B51B0FDE5FFA163B86924E3C1"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "REAL"
+        valueType: "org.springframework.http.ResponseEntity"
+        uuid: "org.springframework.http.ResponseEntity"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity"
+        name: "unprocessableEntity"
+        parameters: []
+        signature: "unprocessableEntity(): ResponseEntity$BodyBuilder"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "unprocessableEntity"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "unprocessableEntity"
+            methodParameters: []
+          valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+          uuid: "sendOwnerDetails_responseEntity.BodyBuilder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "4884EB0899D71136E17B503B7AFD5BE9"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "unprocessableEntity"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "unprocessableEntity"
+          methodParameters: []
+        valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+        uuid: "sendOwnerDetails_responseEntity.BodyBuilder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity$BodyBuilder"
+        name: "body"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Error"
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "body(String): ResponseEntity"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.springframework.http.ResponseEntity"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "unprocessableEntity"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "unprocessableEntity"
+                methodParameters: []
+              valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+              uuid: "sendOwnerDetails_responseEntity.BodyBuilder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "arg0"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "Error"
+                valueType: "java.lang.String"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "body"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.http.ResponseEntity"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "unprocessableEntity"
+                methodParameters: []
+              valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+              uuid: "sendOwnerDetails_responseEntity.BodyBuilder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "arg0"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "Error"
+                valueType: "java.lang.String"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "body"
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "?"
+          uuid: "sendOwnerDetails_responseEntity2"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EC3869900E9F66B2E11BCA29237812AE"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<method_return_from_value>
+          target: "org.springframework.http.ResponseEntity"
+          localVariableValue:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "org.springframework.http.ResponseEntity"
+              method: "unprocessableEntity"
+              methodParameters: []
+            suggestedContent: !<static_method_return>
+              target: "org.springframework.http.ResponseEntity"
+              method: "unprocessableEntity"
+              methodParameters: []
+            valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+            uuid: "sendOwnerDetails_responseEntity.BodyBuilder1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "arg0"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Error"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "body"
+        suggestedContent: !<method_return_from_value>
+          target: "org.springframework.http.ResponseEntity"
+          localVariableValue:
+            sapientType: "OBJECT"
+            suggestedContent: !<static_method_return>
+              target: "org.springframework.http.ResponseEntity"
+              method: "unprocessableEntity"
+              methodParameters: []
+            valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+            uuid: "sendOwnerDetails_responseEntity.BodyBuilder1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "arg0"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Error"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "body"
+        valueType: "org.springframework.http.ResponseEntity"
+        genericValueType: "?"
+        uuid: "sendOwnerDetails_responseEntity2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "c601d38a-b9c0-304d-b2c2-1433980068df"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    usedLLM: true
+    disabledStatusUpdatedByUser: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "sendOwnerDetailsWhenDetailsNotEqualsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "54154320347519C9420BDB43AB090251"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8E05F0271EDC0A7FD36E8A762A4F1AC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.controller.MessController"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "owner_id"
+      modelFingerprint: "B811B33EB8E63314D5C3E2A23E509460"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "owner_id1"
+        valueType: "java.lang.String"
+        uuid: "sendOwnerDetails_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messService"
+      modelFingerprint: "CF421385254F436966D1CF5D6B788B96"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.MessService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.MessService"
+        uuid: "<init>_messService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messService"
+        name: "getOwnerDetails"
+        parameters:
+        - name: "owner_id"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "owner_id1"
+            valueType: "java.lang.String"
+            uuid: "sendOwnerDetails_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getOwnerDetails(String): ResponseEntity"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.springframework.http.ResponseEntity"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "?"
+          uuid: "sendOwnerDetails_responseEntity1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "2A288E202EF27083A94880DDEC8D2738"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.springframework.http.ResponseEntity"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.springframework.http.ResponseEntity"
+        genericValueType: "?"
+        uuid: "sendOwnerDetails_responseEntity1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "cf787be2-de89-3520-9bd8-ff8585267145"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    usedLLM: true
+    disabledStatusUpdatedByUser: false
+  - pathId: "path3"
+    pathIdForUser: "path3"
+    testPathName: "sendOwnerDetailsWhenCaughtException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "1DC5862DEF5AD70696C42FB90AD99FCF"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.lang.Exception"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8E05F0271EDC0A7FD36E8A762A4F1AC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.controller.MessController"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "owner_id"
+      modelFingerprint: "B811B33EB8E63314D5C3E2A23E509460"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "owner_id1"
+        valueType: "java.lang.String"
+        uuid: "sendOwnerDetails_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messService"
+      modelFingerprint: "72835041E358A69335979173E0074D56"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.MessService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.MessService"
+        uuid: "<init>_messService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messService"
+        name: "getOwnerDetails"
+        parameters:
+        - name: "owner_id"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "owner_id1"
+            valueType: "java.lang.String"
+            uuid: "sendOwnerDetails_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "getOwnerDetails(String): ResponseEntity"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.springframework.http.ResponseEntity"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "?"
+          uuid: "sendOwnerDetails_responseEntity1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ResponseEntity"
+      modelFingerprint: "BC6B3E4B51B0FDE5FFA163B86924E3C1"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "REAL"
+        valueType: "org.springframework.http.ResponseEntity"
+        uuid: "org.springframework.http.ResponseEntity"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity"
+        name: "unprocessableEntity"
+        parameters: []
+        signature: "unprocessableEntity(): ResponseEntity$BodyBuilder"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "unprocessableEntity"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "unprocessableEntity"
+            methodParameters: []
+          valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+          uuid: "sendOwnerDetails_responseEntity.BodyBuilder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "7CCD70722867715E241B5DEB6BB6743F"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "unprocessableEntity"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "unprocessableEntity"
+          methodParameters: []
+        valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+        uuid: "sendOwnerDetails_responseEntity.BodyBuilder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity$BodyBuilder"
+        name: "body"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Error"
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "body(String): ResponseEntity"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.springframework.http.ResponseEntity"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "unprocessableEntity"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "unprocessableEntity"
+                methodParameters: []
+              valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+              uuid: "sendOwnerDetails_responseEntity.BodyBuilder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "arg0"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "Error"
+                valueType: "java.lang.String"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "body"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.http.ResponseEntity"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "unprocessableEntity"
+                methodParameters: []
+              valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+              uuid: "sendOwnerDetails_responseEntity.BodyBuilder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "arg0"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "Error"
+                valueType: "java.lang.String"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "body"
+          valueType: "org.springframework.http.ResponseEntity"
+          uuid: "sendOwnerDetails_responseEntity2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ResponseEntity"
+      modelFingerprint: "95EDE955E0597D6E85EA5A9A34EF7173"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.springframework.http.ResponseEntity"
+        uuid: "org.springframework.http.ResponseEntity"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity"
+        name: "badRequest"
+        parameters: []
+        signature: "badRequest(): ResponseEntity$BodyBuilder"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "badRequest"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "badRequest"
+            methodParameters: []
+          valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+          uuid: "sendOwnerDetails_responseEntity.BodyBuilder2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "2E4AEED49555BD975920ED77830173AA"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "badRequest"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "badRequest"
+          methodParameters: []
+        valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+        uuid: "sendOwnerDetails_responseEntity.BodyBuilder2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity$BodyBuilder"
+        name: "body"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "sendOwnerDetails_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "body(String): ResponseEntity"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.springframework.http.ResponseEntity"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "badRequest"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "badRequest"
+                methodParameters: []
+              valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+              uuid: "sendOwnerDetails_responseEntity.BodyBuilder2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "arg0"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "A"
+                suggestedContent: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "sendOwnerDetails_string2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "body"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.http.ResponseEntity"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "badRequest"
+                methodParameters: []
+              valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+              uuid: "sendOwnerDetails_responseEntity.BodyBuilder2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "arg0"
+              value:
+                sapientType: "BASIC"
+                suggestedContent: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "sendOwnerDetails_string2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "body"
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "?"
+          uuid: "sendOwnerDetails_responseEntity3"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "15494AF0D9DB5F0CB9524B5BCC640000"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<method_return_from_value>
+          target: "org.springframework.http.ResponseEntity"
+          localVariableValue:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "org.springframework.http.ResponseEntity"
+              method: "badRequest"
+              methodParameters: []
+            suggestedContent: !<static_method_return>
+              target: "org.springframework.http.ResponseEntity"
+              method: "badRequest"
+              methodParameters: []
+            valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+            uuid: "sendOwnerDetails_responseEntity.BodyBuilder2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "arg0"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "A"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "sendOwnerDetails_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "body"
+        suggestedContent: !<method_return_from_value>
+          target: "org.springframework.http.ResponseEntity"
+          localVariableValue:
+            sapientType: "OBJECT"
+            suggestedContent: !<static_method_return>
+              target: "org.springframework.http.ResponseEntity"
+              method: "badRequest"
+              methodParameters: []
+            valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+            uuid: "sendOwnerDetails_responseEntity.BodyBuilder2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "arg0"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "sendOwnerDetails_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "body"
+        valueType: "org.springframework.http.ResponseEntity"
+        genericValueType: "?"
+        uuid: "sendOwnerDetails_responseEntity3"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "b5c5206a-d374-336c-9a9c-954a527fc1eb"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    usedLLM: true
+    disabledStatusUpdatedByUser: false
+  - pathId: "path4"
+    pathIdForUser: "path4"
+    testPathName: "sendOwnerDetailsWhenDetailsNotEqualsNullAndCaughtException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "56B66BC69FE90256FD7A24A73F5ABD11"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.lang.Exception"
+    truncated: true
+    inputParameters: []
+    uuid: "16c85d0d-5124-37f0-ae92-4a2b119f6c82"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+- method:
+    name: "updateOwnerDetails"
+    returnType: "org.springframework.http.ResponseEntity"
+    signature: "updateOwnerDetails(java.lang.String,com.org.spemajorbackend.dro.UpdateMessDetails)\
+      \ : org.springframework.http.ResponseEntity<?>"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 3
+      catchExceptions:
+      - "java.lang.Exception"
+    instructionFingerprint: "4C005B147788DCBCC32E783FA7B77E6E"
+    parametersTypes:
+    - "java.lang.String"
+    - "com.org.spemajorbackend.dro.UpdateMessDetails"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "updateOwnerDetailsTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "8C13973A54D03FA0BCE09B2DB6B80C54"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8E05F0271EDC0A7FD36E8A762A4F1AC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.controller.MessController"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "owner_id"
+      modelFingerprint: "B811B33EB8E63314D5C3E2A23E509460"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "owner_id1"
+        valueType: "java.lang.String"
+        uuid: "updateOwnerDetails_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "mess"
+      modelFingerprint: "34BDEAF372AEF9EE3244F99A47F4C49D"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.org.spemajorbackend.dro.UpdateMessDetails"
+        uuid: "updateOwnerDetails_updateMessDetails1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messService"
+      modelFingerprint: "36CCAC0493EAFF24F5925F0BF8E47CE0"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.MessService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.MessService"
+        uuid: "<init>_messService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messService"
+        name: "updateOwnerDetails"
+        parameters:
+        - name: "owner_id"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "owner_id1"
+            valueType: "java.lang.String"
+            uuid: "updateOwnerDetails_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "mess"
+          value:
+            sapientType: "MOCK"
+            valueType: "com.org.spemajorbackend.dro.UpdateMessDetails"
+            uuid: "updateOwnerDetails_updateMessDetails1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "updateOwnerDetails(String,UpdateMessDetails): ResponseEntity"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "?"
+          uuid: "updateOwnerDetails_responseEntity1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8AD7B3673F6E0C79B5A4626E461FBDA0"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.http.ResponseEntity"
+        genericValueType: "?"
+        uuid: "updateOwnerDetails_responseEntity1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "dd9d390f-5041-3400-9a30-38c49e0b106d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "updateOwnerDetailsWhenCaughtException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "254953AEF7359CB873D63B451E52A932"
+    problemWasSolvedByProver: true
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 3
+      catchExceptions:
+      - "java.lang.Exception"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8E05F0271EDC0A7FD36E8A762A4F1AC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.controller.MessController"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "owner_id"
+      modelFingerprint: "B811B33EB8E63314D5C3E2A23E509460"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "owner_id1"
+        valueType: "java.lang.String"
+        uuid: "updateOwnerDetails_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "mess"
+      modelFingerprint: "34BDEAF372AEF9EE3244F99A47F4C49D"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.org.spemajorbackend.dro.UpdateMessDetails"
+        uuid: "updateOwnerDetails_updateMessDetails1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messService"
+      modelFingerprint: "201DF60EED7BA065CB7D7EA2FF7FFB10"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 3
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.MessService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.MessService"
+        uuid: "<init>_messService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messService"
+        name: "updateOwnerDetails"
+        parameters:
+        - name: "owner_id"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "owner_id1"
+            valueType: "java.lang.String"
+            uuid: "updateOwnerDetails_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "mess"
+          value:
+            sapientType: "MOCK"
+            valueType: "com.org.spemajorbackend.dro.UpdateMessDetails"
+            uuid: "updateOwnerDetails_updateMessDetails1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "updateOwnerDetails(String,UpdateMessDetails): ResponseEntity"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.RuntimeException"
+            parameters:
+            - name: "message"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "A"
+                suggestedContent: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "updateOwnerDetails_string2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.RuntimeException"
+            parameters:
+            - name: "message"
+              value:
+                sapientType: "BASIC"
+                suggestedContent: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "updateOwnerDetails_string2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.RuntimeException"
+          uuid: "updateOwnerDetails_responseEntity1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ResponseEntity"
+      modelFingerprint: "95EDE955E0597D6E85EA5A9A34EF7173"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.springframework.http.ResponseEntity"
+        uuid: "org.springframework.http.ResponseEntity"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity"
+        name: "badRequest"
+        parameters: []
+        signature: "badRequest(): ResponseEntity$BodyBuilder"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "badRequest"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "badRequest"
+            methodParameters: []
+          valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+          uuid: "updateOwnerDetails_responseEntity.BodyBuilder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "2E4AEED49555BD975920ED77830173AA"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "badRequest"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "badRequest"
+          methodParameters: []
+        valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+        uuid: "updateOwnerDetails_responseEntity.BodyBuilder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity$BodyBuilder"
+        name: "body"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "updateOwnerDetails_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "body(String): ResponseEntity"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.springframework.http.ResponseEntity"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "badRequest"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "badRequest"
+                methodParameters: []
+              valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+              uuid: "updateOwnerDetails_responseEntity.BodyBuilder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "arg0"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "A"
+                suggestedContent: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "updateOwnerDetails_string2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "body"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.http.ResponseEntity"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "badRequest"
+                methodParameters: []
+              valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+              uuid: "updateOwnerDetails_responseEntity.BodyBuilder1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "arg0"
+              value:
+                sapientType: "BASIC"
+                suggestedContent: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "updateOwnerDetails_string2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "body"
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "?"
+          uuid: "updateOwnerDetails_responseEntity2"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "15494AF0D9DB5F0CB9524B5BCC640000"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<method_return_from_value>
+          target: "org.springframework.http.ResponseEntity"
+          localVariableValue:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "org.springframework.http.ResponseEntity"
+              method: "badRequest"
+              methodParameters: []
+            suggestedContent: !<static_method_return>
+              target: "org.springframework.http.ResponseEntity"
+              method: "badRequest"
+              methodParameters: []
+            valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+            uuid: "updateOwnerDetails_responseEntity.BodyBuilder1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "arg0"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "A"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "updateOwnerDetails_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "body"
+        suggestedContent: !<method_return_from_value>
+          target: "org.springframework.http.ResponseEntity"
+          localVariableValue:
+            sapientType: "OBJECT"
+            suggestedContent: !<static_method_return>
+              target: "org.springframework.http.ResponseEntity"
+              method: "badRequest"
+              methodParameters: []
+            valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+            uuid: "updateOwnerDetails_responseEntity.BodyBuilder1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "arg0"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "updateOwnerDetails_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "body"
+        valueType: "org.springframework.http.ResponseEntity"
+        genericValueType: "?"
+        uuid: "updateOwnerDetails_responseEntity2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "4e5be08b-e97a-356d-8764-64da720212d1"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+- method:
+    name: "seeJoiningRequests"
+    returnType: "org.springframework.http.ResponseEntity"
+    signature: "seeJoiningRequests(java.lang.String) : org.springframework.http.ResponseEntity<?>"
+    instructionFingerprint: "74C0B3C9A50C4C422BA2C926E1E02F61"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "seeJoiningRequestsTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "6A5E57AC7B754EFA8A8C316BE25CB328"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8E05F0271EDC0A7FD36E8A762A4F1AC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.MessService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.controller.MessController"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "owner_id"
+      modelFingerprint: "B811B33EB8E63314D5C3E2A23E509460"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "owner_id1"
+        valueType: "java.lang.String"
+        uuid: "seeJoiningRequests_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "messService"
+      modelFingerprint: "7B8F069B13515ADB0BDAD515079D795D"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.MessService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.MessService"
+        uuid: "<init>_messService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.messService"
+        name: "seeJoiningRequests"
+        parameters:
+        - name: "ownerId"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "owner_id1"
+            valueType: "java.lang.String"
+            uuid: "seeJoiningRequests_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "seeJoiningRequests(String): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          suggestedContent: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.List"
+          genericValueType: "com.org.spemajorbackend.dto.JoinRequestResponse"
+          uuid: "seeJoiningRequests_list1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ResponseEntity"
+      modelFingerprint: "2CCCE68B236B658EF424097DD4E320D5"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.http.ResponseEntity"
+        uuid: "org.springframework.http.ResponseEntity"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity"
+        name: "ok"
+        parameters:
+        - name: "body"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            suggestedContent: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "com.org.spemajorbackend.dto.JoinRequestResponse"
+            uuid: "seeJoiningRequests_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "ok(List): ResponseEntity"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "java.util.List"
+          uuid: "seeJoiningRequests_responseEntity1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "663BF5A1EB991ACF1B48FDC3026B8688"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.http.ResponseEntity"
+        genericValueType: "java.util.List"
+        uuid: "seeJoiningRequests_responseEntity1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "c26bb39a-6950-343d-94b2-cde573443ed7"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+- method:
+    name: "amountBalance"
+    returnType: "org.springframework.http.ResponseEntity"
+    signature: "amountBalance(java.lang.String) : org.springframework.http.ResponseEntity<com.org.spemajorbackend.dto.AmountBalancesResponse>"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 4
+      catchExceptions:
+      - "java.lang.Exception"
+    instructionFingerprint: "867E9C3DAC117E3300C93AB2A7831075"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "amountBalanceTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "CCA997B5ECE6DA6E1F5CF40095DA1EC1"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "0C359F3FCC167760B65EDADACCB8EB82"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.CalculatorService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.CalculatorService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.controller.MessController"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "owner_id"
+      modelFingerprint: "B811B33EB8E63314D5C3E2A23E509460"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "owner_id1"
+        valueType: "java.lang.String"
+        uuid: "amountBalance_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "calculatorService"
+      modelFingerprint: "E774B8105BBFB382D4F7299D5FDF0A51"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 4
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.CalculatorService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.CalculatorService"
+        uuid: "<init>_calculatorService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.calculatorService"
+        name: "calculateTotal"
+        parameters:
+        - name: "ownerId"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "owner_id1"
+            valueType: "java.lang.String"
+            uuid: "amountBalance_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "calculateTotal(String): AmountBalancesResponse"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+          uuid: "amountBalance_amountBalancesResponse1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ResponseEntity"
+      modelFingerprint: "F3F78233375E8E8492BD5C50E809B060"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 4
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.http.ResponseEntity"
+        uuid: "org.springframework.http.ResponseEntity"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity"
+        name: "ok"
+        parameters: []
+        signature: "ok(): ResponseEntity$BodyBuilder"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+          uuid: "amountBalance_responseEntity.BodyBuilder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "75A3C2A82865974629DC44AA41F0474E"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 4
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+        uuid: "amountBalance_responseEntity.BodyBuilder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity$BodyBuilder"
+        name: "body"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "MOCK"
+            valueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+            uuid: "amountBalance_amountBalancesResponse1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "body(AmountBalancesResponse): ResponseEntity"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+          uuid: "amountBalance_responseEntity1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "82E3860B74C81B0CDA90D5B341F26B1A"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.springframework.http.ResponseEntity"
+        genericValueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+        uuid: "amountBalance_responseEntity1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "1e0d6b72-4d52-385f-8056-1aaf92cfa2aa"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "amountBalanceWhenCaughtException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.org.spemajorbackend.service.MessService,com.org.spemajorbackend.service.CalculatorService)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "FED1CF721CDDC50B4F575580C02CE70D"
+    problemWasSolvedByProver: true
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 4
+      catchExceptions:
+      - "java.lang.Exception"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "0C359F3FCC167760B65EDADACCB8EB82"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.CalculatorService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "com.org.spemajorbackend.controller.MessController"
+          parameters:
+          - name: "messService"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "com.org.spemajorbackend.service.MessService"
+              uuid: "<init>_messService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "calculatorService"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "com.org.spemajorbackend.service.CalculatorService"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "com.org.spemajorbackend.service.CalculatorService"
+              uuid: "<init>_calculatorService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "com.org.spemajorbackend.controller.MessController"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "owner_id"
+      modelFingerprint: "B811B33EB8E63314D5C3E2A23E509460"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "owner_id1"
+        valueType: "java.lang.String"
+        uuid: "amountBalance_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "calculatorService"
+      modelFingerprint: "E774B8105BBFB382D4F7299D5FDF0A51"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 4
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "com.org.spemajorbackend.service.CalculatorService"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "com.org.spemajorbackend.service.CalculatorService"
+        uuid: "<init>_calculatorService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.calculatorService"
+        name: "calculateTotal"
+        parameters:
+        - name: "ownerId"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "owner_id1"
+            valueType: "java.lang.String"
+            uuid: "amountBalance_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "calculateTotal(String): AmountBalancesResponse"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+          uuid: "amountBalance_amountBalancesResponse1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ResponseEntity"
+      modelFingerprint: "79489575C75E2828934B18AB7BA80C07"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 4
+      value:
+        sapientType: "REAL"
+        valueType: "org.springframework.http.ResponseEntity"
+        uuid: "org.springframework.http.ResponseEntity"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity"
+        name: "ok"
+        parameters: []
+        signature: "ok(): ResponseEntity$BodyBuilder"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "ok"
+            methodParameters: []
+          valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+          uuid: "amountBalance_responseEntity.BodyBuilder1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "412C3213EF4581FD6F978B1A3603A169"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 4
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "ok"
+          methodParameters: []
+        valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+        uuid: "amountBalance_responseEntity.BodyBuilder1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity$BodyBuilder"
+        name: "body"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "MOCK"
+            valueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+            uuid: "amountBalance_amountBalancesResponse1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "body(AmountBalancesResponse): ResponseEntity"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.RuntimeException"
+            parameters:
+            - name: "message"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "A"
+                suggestedContent: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "amountBalance_string2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.RuntimeException"
+            parameters:
+            - name: "message"
+              value:
+                sapientType: "BASIC"
+                suggestedContent: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "amountBalance_string2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.RuntimeException"
+          uuid: "amountBalance_responseEntity1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ResponseEntity"
+      modelFingerprint: "BC6B3E4B51B0FDE5FFA163B86924E3C1"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.springframework.http.ResponseEntity"
+        uuid: "org.springframework.http.ResponseEntity"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity"
+        name: "unprocessableEntity"
+        parameters: []
+        signature: "unprocessableEntity(): ResponseEntity$BodyBuilder"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "unprocessableEntity"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "unprocessableEntity"
+            methodParameters: []
+          valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+          uuid: "amountBalance_responseEntity.BodyBuilder2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "698A01C9019B93507D04C074C3544AE5"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "unprocessableEntity"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "unprocessableEntity"
+          methodParameters: []
+        valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+        uuid: "amountBalance_responseEntity.BodyBuilder2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity$BodyBuilder"
+        name: "body"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "amountBalance_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "body(String): ResponseEntity"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.springframework.http.ResponseEntity"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "unprocessableEntity"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "unprocessableEntity"
+                methodParameters: []
+              valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+              uuid: "amountBalance_responseEntity.BodyBuilder2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "arg0"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "A"
+                suggestedContent: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "amountBalance_string2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "body"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.http.ResponseEntity"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "unprocessableEntity"
+                methodParameters: []
+              valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+              uuid: "amountBalance_responseEntity.BodyBuilder2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "arg0"
+              value:
+                sapientType: "BASIC"
+                suggestedContent: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "amountBalance_string2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "body"
+          valueType: "org.springframework.http.ResponseEntity"
+          uuid: "amountBalance_responseEntity2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ResponseEntity"
+      modelFingerprint: "95EDE955E0597D6E85EA5A9A34EF7173"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.springframework.http.ResponseEntity"
+        uuid: "org.springframework.http.ResponseEntity"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity"
+        name: "badRequest"
+        parameters: []
+        signature: "badRequest(): ResponseEntity$BodyBuilder"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "badRequest"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.springframework.http.ResponseEntity"
+            method: "badRequest"
+            methodParameters: []
+          valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+          uuid: "amountBalance_responseEntity.BodyBuilder3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "784E8B3175581DA8B27BFF9E43774137"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "badRequest"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
+          target: "org.springframework.http.ResponseEntity"
+          method: "badRequest"
+          methodParameters: []
+        valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+        uuid: "amountBalance_responseEntity.BodyBuilder3"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.springframework.http.ResponseEntity$BodyBuilder"
+        name: "body"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+              parameters:
+              - name: "Total"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0.0
+                  valueType: "java.lang.Double"
+                  uuid: "amountBalance_double1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "paid"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0.0
+                  valueType: "java.lang.Double"
+                  uuid: "amountBalance_double2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "remaining"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0.0
+                  valueType: "java.lang.Double"
+                  uuid: "amountBalance_double3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: true
+            suggestedContent: !<new>
+              target: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+              parameters:
+              - name: "Total"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0.0
+                  valueType: "java.lang.Double"
+                  uuid: "amountBalance_double1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "paid"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0.0
+                  valueType: "java.lang.Double"
+                  uuid: "amountBalance_double2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "remaining"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0.0
+                  valueType: "java.lang.Double"
+                  uuid: "amountBalance_double3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: true
+            valueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+            uuid: "amountBalance_amountBalancesResponse2"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "body(AmountBalancesResponse): ResponseEntity"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.springframework.http.ResponseEntity"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "badRequest"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "badRequest"
+                methodParameters: []
+              valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+              uuid: "amountBalance_responseEntity.BodyBuilder3"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "arg0"
+              value:
+                sapientType: "OBJECT"
+                content: !<new>
+                  target: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+                  parameters:
+                  - name: "Total"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0.0
+                      valueType: "java.lang.Double"
+                      uuid: "amountBalance_double1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  - name: "paid"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0.0
+                      valueType: "java.lang.Double"
+                      uuid: "amountBalance_double2"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  - name: "remaining"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0.0
+                      valueType: "java.lang.Double"
+                      uuid: "amountBalance_double3"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  privateConstructor: false
+                  createdByTargetCode: true
+                suggestedContent: !<new>
+                  target: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+                  parameters:
+                  - name: "Total"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0.0
+                      valueType: "java.lang.Double"
+                      uuid: "amountBalance_double1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  - name: "paid"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0.0
+                      valueType: "java.lang.Double"
+                      uuid: "amountBalance_double2"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  - name: "remaining"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0.0
+                      valueType: "java.lang.Double"
+                      uuid: "amountBalance_double3"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  privateConstructor: false
+                  createdByTargetCode: true
+                valueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+                uuid: "amountBalance_amountBalancesResponse2"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "body"
+          suggestedContent: !<method_return_from_value>
+            target: "org.springframework.http.ResponseEntity"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.springframework.http.ResponseEntity"
+                method: "badRequest"
+                methodParameters: []
+              valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+              uuid: "amountBalance_responseEntity.BodyBuilder3"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "arg0"
+              value:
+                sapientType: "OBJECT"
+                suggestedContent: !<new>
+                  target: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+                  parameters:
+                  - name: "Total"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0.0
+                      valueType: "java.lang.Double"
+                      uuid: "amountBalance_double1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  - name: "paid"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0.0
+                      valueType: "java.lang.Double"
+                      uuid: "amountBalance_double2"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  - name: "remaining"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0.0
+                      valueType: "java.lang.Double"
+                      uuid: "amountBalance_double3"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  privateConstructor: false
+                  createdByTargetCode: true
+                valueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+                uuid: "amountBalance_amountBalancesResponse2"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "body"
+          valueType: "org.springframework.http.ResponseEntity"
+          genericValueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+          uuid: "amountBalance_responseEntity3"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EE2E5B5ACE7BEBECFABFCAC1443A944D"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<method_return_from_value>
+          target: "org.springframework.http.ResponseEntity"
+          localVariableValue:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "org.springframework.http.ResponseEntity"
+              method: "badRequest"
+              methodParameters: []
+            suggestedContent: !<static_method_return>
+              target: "org.springframework.http.ResponseEntity"
+              method: "badRequest"
+              methodParameters: []
+            valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+            uuid: "amountBalance_responseEntity.BodyBuilder3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "arg0"
+            value:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+                parameters:
+                - name: "Total"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0.0
+                    valueType: "java.lang.Double"
+                    uuid: "amountBalance_double1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "paid"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0.0
+                    valueType: "java.lang.Double"
+                    uuid: "amountBalance_double2"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "remaining"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0.0
+                    valueType: "java.lang.Double"
+                    uuid: "amountBalance_double3"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+                parameters:
+                - name: "Total"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0.0
+                    valueType: "java.lang.Double"
+                    uuid: "amountBalance_double1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "paid"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0.0
+                    valueType: "java.lang.Double"
+                    uuid: "amountBalance_double2"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "remaining"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0.0
+                    valueType: "java.lang.Double"
+                    uuid: "amountBalance_double3"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+              uuid: "amountBalance_amountBalancesResponse2"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "body"
+        suggestedContent: !<method_return_from_value>
+          target: "org.springframework.http.ResponseEntity"
+          localVariableValue:
+            sapientType: "OBJECT"
+            suggestedContent: !<static_method_return>
+              target: "org.springframework.http.ResponseEntity"
+              method: "badRequest"
+              methodParameters: []
+            valueType: "org.springframework.http.ResponseEntity$BodyBuilder"
+            uuid: "amountBalance_responseEntity.BodyBuilder3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "arg0"
+            value:
+              sapientType: "OBJECT"
+              suggestedContent: !<new>
+                target: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+                parameters:
+                - name: "Total"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0.0
+                    valueType: "java.lang.Double"
+                    uuid: "amountBalance_double1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "paid"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0.0
+                    valueType: "java.lang.Double"
+                    uuid: "amountBalance_double2"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "remaining"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0.0
+                    valueType: "java.lang.Double"
+                    uuid: "amountBalance_double3"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+              uuid: "amountBalance_amountBalancesResponse2"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "body"
+        valueType: "org.springframework.http.ResponseEntity"
+        genericValueType: "com.org.spemajorbackend.dto.AmountBalancesResponse"
+        uuid: "amountBalance_responseEntity3"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "3590010e-5de4-3e28-966a-db34310dac95"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    usedLLM: false
+    disabledStatusUpdatedByUser: false

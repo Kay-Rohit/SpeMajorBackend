@@ -17,6 +17,7 @@ public class Customer {
     private String lastname;
     private String email;
     private String phone;
+    private Boolean paid;
 
     @ManyToOne
     @JoinColumn(name = "mess_owner_username")
@@ -24,11 +25,12 @@ public class Customer {
     private Mess mess;
 
     //dont add constructors for other objects and mapping entities
-    public Customer(String username, String firstname, String lastname, String email, String phone) {
+    public Customer(String username, String firstname, String lastname, String email, String phone, Boolean paid) {
         this.username = username;
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
         this.phone = phone;
+        this.paid = paid;
     }
 }

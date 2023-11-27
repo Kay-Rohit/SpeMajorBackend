@@ -105,6 +105,33 @@
             <artifactId>spring-boot-starter-mail</artifactId>
             <version>2.5.6</version>
         </dependency>
+        <dependency>
+            <groupId>org.pitest</groupId>
+            <artifactId>pitest-junit5-plugin</artifactId>
+            <version>LATEST</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.2.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <version>5.2.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- byte-buddy is an optional dependency. Mockito brings it, but an old version can cause problems.
+          We need at least 1.12.9 -->
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <version>1.14.4</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -121,6 +148,24 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <!--        PIT mutation testing -->
+
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.15.3</version>
+                <configuration>
+                    <targetClasses>
+                        <param>com.org.spemajorbackend.controller.*</param>
+                        <param>com.org.spemajorbackend.service.CalculatorService</param>
+                        <param>com.org.spemajorbackend.service.CustomerService</param>
+                        <param>com.org.spemajorbackend.service.MessService</param>
+                        <param>com.org.spemajorbackend.service.RegistrationService</param>
+                        <param>com.org.spemajorbackend.config.JwtRequestFilter</param>
+                    </targetClasses>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 

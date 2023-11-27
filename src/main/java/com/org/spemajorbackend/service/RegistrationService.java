@@ -12,13 +12,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 @Service
 public class RegistrationService {
     private final PasswordEncoder passwordEncoder;
     private final AuthMasterRepository authRepository;
     private final CustomerRepository customerRepository;
     private final MessRepository messRepository;
+    private static final Logger logger = LogManager.getLogger(RegistrationService.class);
 
     public RegistrationService(PasswordEncoder passwordEncoder, AuthMasterRepository authRepository, CustomerRepository customerRepository, MessRepository messRepository) {
         this.passwordEncoder = passwordEncoder;
@@ -37,7 +41,8 @@ public class RegistrationService {
     public String registerCustomer(CustomerRegRequest request) {
         try{
             Boolean res = authRepository.findById(request.getUsername()).isEmpty();
-            System.out.println(res);
+//            System.out.println(res);
+            logger.info(res);
             if( res ){
 
                 authRepository.save(
@@ -54,7 +59,8 @@ public class RegistrationService {
                                 request.getFirstname(),
                                 request.getLastname(),
                                 request.getEmail(),
-                                request.getPhone()
+                                request.getPhone(),
+                                Boolean.FALSE
                         )
                 );
                 return "Registered Successfully";
@@ -64,7 +70,8 @@ public class RegistrationService {
 
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+//            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
         }
 
         return "Some Error occured!!!";
@@ -75,7 +82,8 @@ public class RegistrationService {
     public String registerMess(MessRegRequest request) {
         try{
             Boolean res = authRepository.findById(request.getUsername()).isEmpty();
-            System.out.println(res);
+//            System.out.println(res);
+            logger.info(res);
             if( res ){
 
                 authRepository.save(
@@ -111,7 +119,8 @@ public class RegistrationService {
 
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+//            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
         }
 
         return "Some Error occured!!!";
